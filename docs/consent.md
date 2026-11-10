@@ -43,12 +43,12 @@ subject to Presage's wellness disclaimer.
 - "eyes-on time"
 - "on screen while you were looking"
 
-**We do not claim**
+**Banned claims** (we never say or imply these)
 
-- Anything beyond eyes-on time and “on screen while you were looking”
+- Attention, focus, comprehension, fatigue, or stress
 - Code correctness
 - Any diagnostic or clinical meaning for pulse or face signals
-- Remote monitoring for other people on your machine
+- Team / manager views, remote monitoring, or a hidden / covert mode
 
 Receipts are editable under `.git/read-receipt/`. The trailer honestly reports what
 this tool recorded locally, including `overridden` or `unverified` when you bypass

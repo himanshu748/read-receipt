@@ -125,4 +125,4 @@ Follow the 2-minute judge walkthrough: **[docs/demo-script.md](docs/demo-script.
 
 ## License
 
-See repository license file when published.
+Hackathon prototype — license to be added when the public repo is published.

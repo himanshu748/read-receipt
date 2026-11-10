@@ -27,9 +27,9 @@ const BANNED = [
   },
 ];
 
-// Allow-list: files that discuss the ban itself (PLAN, this script, tests).
+// Allow-list: files that discuss the ban itself (PLAN, consent ban-list, this script, tests).
 const ALLOW_PATH_RE =
-  /(PLAN\.md|CHANGELOG\.md|check-wording\.mjs|messages\.test\.ts|contracts\.ts)$/;
+  /(PLAN\.md|CHANGELOG\.md|docs\/consent\.md|check-wording\.mjs|messages\.test\.ts|contracts\.ts)$/;
 
 function walk(dir, out = []) {
   let entries;
