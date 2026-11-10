@@ -69,7 +69,8 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && npm run build:webview",
+    "build:webview": "esbuild webview/main.ts --bundle --outfile=webview/dist/main.js --format=iife --platform=browser --target=es2022",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
@@ -77,6 +78,8 @@
     "@rr/protocol": "0.1.0"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0"
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.1",
+    "jsdom": "^26.0.0"
   }
 }

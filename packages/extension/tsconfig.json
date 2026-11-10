@@ -3,10 +3,10 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "out",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM"],
     "types": ["node", "vscode"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["src/panel/**", "webview/**"],
+  "exclude": ["src/**/*.test.ts", "webview/**"],
   "references": [{ "path": "../protocol" }, { "path": "../core" }]
 }

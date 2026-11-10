@@ -1,0 +1,277 @@
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--vscode-editor-background);
+  color: var(--vscode-foreground);
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  line-height: 1.4;
+}
+
+.rr-app {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 14px 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.rr-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rr-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--vscode-foreground);
+}
+
+.rr-privacy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--vscode-descriptionForeground);
+}
+
+.rr-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 220px;
+  background: var(--vscode-sideBar-background);
+  border: 1px solid var(--vscode-widget-border, var(--vscode-panel-border));
+  overflow: hidden;
+}
+
+.rr-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rr-replay-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--vscode-descriptionForeground);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--vscode-editor-background) 80%, transparent),
+      var(--vscode-sideBar-background)
+    );
+}
+
+.rr-cal {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: color-mix(in srgb, var(--vscode-editor-background) 85%, transparent);
+}
+
+.rr-cal-ring {
+  width: 28px;
+  height: 28px;
+  transform: rotate(-90deg);
+}
+
+.rr-cal-bg {
+  fill: none;
+  stroke: var(--vscode-widget-border, var(--vscode-panel-border));
+  stroke-width: 3;
+}
+
+.rr-cal-fg {
+  fill: none;
+  stroke: var(--vscode-progressBar-background, var(--vscode-focusBorder));
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 97.4;
+  stroke-dashoffset: 97.4;
+  transition: stroke-dashoffset 120ms linear;
+}
+
+.rr-cal-label {
+  font-size: 0.8rem;
+  color: var(--vscode-foreground);
+}
+
+.rr-status {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.rr-eyes {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  grid-column: 1 / 2;
+}
+
+.rr-eyes-light {
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--vscode-disabledForeground);
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.rr-eyes-light[data-on='true'] {
+  background: var(--vscode-testing-iconPassed, var(--vscode-charts-green, #89d185));
+}
+
+.rr-eyes-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.rr-eyes-label {
+  font-weight: 600;
+}
+
+.rr-pause {
+  color: var(--vscode-descriptionForeground);
+  font-size: 0.9rem;
+}
+
+.rr-pulse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.rr-bpm {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  color: var(--vscode-foreground);
+}
+
+.rr-wave {
+  display: block;
+  width: 120px;
+  height: 28px;
+  background: transparent;
+}
+
+.rr-phase {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--vscode-descriptionForeground);
+}
+
+.rr-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 8px 10px;
+  color: var(--vscode-errorForeground, var(--vscode-foreground));
+  background: var(--vscode-inputValidation-errorBackground, transparent);
+  border: 1px solid var(--vscode-inputValidation-errorBorder, var(--vscode-errorForeground));
+}
+
+.rr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rr-btn {
+  appearance: none;
+  border: 1px solid var(--vscode-button-border, transparent);
+  background: var(--vscode-button-secondaryBackground, var(--vscode-button-background));
+  color: var(--vscode-button-secondaryForeground, var(--vscode-button-foreground));
+  padding: 5px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.rr-btn:hover {
+  background: var(
+    --vscode-button-secondaryHoverBackground,
+    var(--vscode-button-hoverBackground)
+  );
+}
+
+.rr-btn:focus-visible {
+  outline: 1px solid var(--vscode-focusBorder);
+  outline-offset: 1px;
+}
+
+#rr-start {
+  background: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+}
+
+#rr-start:hover {
+  background: var(--vscode-button-hoverBackground);
+}
+
+.rr-unread-title {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+}
+
+.rr-summary {
+  margin: 0 0 8px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 0.85rem;
+}
+
+.rr-unread-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rr-unread-btn {
+  width: 100%;
+  text-align: left;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--vscode-textLink-foreground);
+  padding: 6px 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.rr-unread-btn:hover {
+  color: var(--vscode-textLink-activeForeground);
+  background: var(--vscode-list-hoverBackground);
+}
+
+.rr-unread-btn:focus-visible {
+  outline: 1px solid var(--vscode-focusBorder);
+}
+
+[hidden] {
+  display: none !important;
+}
