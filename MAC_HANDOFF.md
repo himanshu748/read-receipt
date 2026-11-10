@@ -4,15 +4,20 @@ Wave 1 is integrated on branch `cursor/read-receipt-6a59`. Continue on your Appl
 
 ## Repo
 
-This Cloud Agent session uses a temporary Origin remote. **For the DEV challenge you need a fresh public GitHub repo** — use the **Create repo** pill in Cursor (public). This agent cannot create a public GitHub repo (`gh` is logged out; Origin create is only private/internal).
+**Public GitHub:** https://github.com/himanshu748/read-receipt  
+(empty on create — this Cloud Agent cannot authenticate to GitHub; push from your Mac.)
 
 ```bash
-git clone <your-public-github-url>
-cd <repo>
-git fetch && git checkout cursor/read-receipt-6a59
-npm install
-npm run build
-npm test   # expect 106 passing
+# if you already have the Cloud Agent clone / worktree with our commits:
+git remote add github https://github.com/himanshu748/read-receipt.git   # once
+git push -u github cursor/read-receipt-6a59
+git push github cursor/read-receipt-6a59:main   # optional: put wave 1 on main
+
+# or fresh clone after you've pushed:
+git clone https://github.com/himanshu748/read-receipt.git
+cd read-receipt
+git checkout cursor/read-receipt-6a59
+npm install && npm run build && npm test   # expect 106 passing
 ```
 
 ## Done (wave 1)
