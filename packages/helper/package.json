@@ -17,9 +17,14 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "gen-replay": "node ./scripts/gen-replay.mjs"
   },
   "dependencies": {
-    "@rr/protocol": "0.1.0"
+    "@rr/protocol": "0.1.0",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.2"
   }
 }

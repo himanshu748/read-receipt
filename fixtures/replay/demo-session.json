@@ -1,0 +1,8834 @@
+{
+  "format": "read-receipt-recording",
+  "version": 1,
+  "createdAt": "2026-11-10T09:27:36.134Z",
+  "source": "synthetic",
+  "sdkVersion": null,
+  "note": "A1 demo: calibrate→read→blink→closure→look-down→no-face→two-faces→too-dark→credits",
+  "samples": [
+    {
+      "t": 0,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 0,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12,
+      "yaw": 0.001,
+      "eyeOpenness": 0.08,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 0,
+      "kind": "pressure",
+      "value": 1
+    },
+    {
+      "t": 100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12019966683329365,
+      "yaw": 0.0009958706137005629,
+      "eyeOpenness": 0.08011088262850996,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 100,
+      "kind": "pressure",
+      "value": 1.239591487075041
+    },
+    {
+      "t": 200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12039733866159012,
+      "yaw": 0.0009835165584646712,
+      "eyeOpenness": 0.08022039774345613,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 200,
+      "kind": "pressure",
+      "value": 1.3493093549498951
+    },
+    {
+      "t": 300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12059104041332268,
+      "yaw": 0.0009630398636251923,
+      "eyeOpenness": 0.08032719469679615,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 300,
+      "kind": "pressure",
+      "value": 1.2696796349715262
+    },
+    {
+      "t": 400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1207788366846173,
+      "yaw": 0.0009346096415483818,
+      "eyeOpenness": 0.08042995636352836,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 400,
+      "kind": "pressure",
+      "value": 1.0438666317475065
+    },
+    {
+      "t": 500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1209588510772084,
+      "yaw": 0.0008984606909733079,
+      "eyeOpenness": 0.08052741538577186,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 500,
+      "kind": "pressure",
+      "value": 0.7942751616976345
+    },
+    {
+      "t": 600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12112928494679007,
+      "yaw": 0.0008548915578624577,
+      "eyeOpenness": 0.08061836980306974,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 600,
+      "kind": "pressure",
+      "value": 0.656199462244959
+    },
+    {
+      "t": 700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12128843537447538,
+      "yaw": 0.000804262069778524,
+      "eyeOpenness": 0.08070169787614674,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 700,
+      "kind": "pressure",
+      "value": 0.7044852260742946
+    },
+    {
+      "t": 800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12143471218179903,
+      "yaw": 0.0007469903641503894,
+      "eyeOpenness": 0.08077637192130066,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 800,
+      "kind": "pressure",
+      "value": 0.9129585394923007
+    },
+    {
+      "t": 900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12156665381925497,
+      "yaw": 0.0006835494349711864,
+      "eyeOpenness": 0.0808414709848079,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 900,
+      "kind": "pressure",
+      "value": 1.1686137859356003
+    },
+    {
+      "t": 1000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1216829419696158,
+      "yaw": 0.0006144632264484674,
+      "eyeOpenness": 0.08089619220102996,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1000,
+      "kind": "pressure",
+      "value": 1.3328697807033036
+    },
+    {
+      "t": 1100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12178241472012287,
+      "yaw": 0.0005403023058681397,
+      "eyeOpenness": 0.08093986069414169,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1100,
+      "kind": "pressure",
+      "value": 1.3166894683631067
+    },
+    {
+      "t": 1200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12186407817193445,
+      "yaw": 0.0004616791514089997,
+      "eyeOpenness": 0.08097193790136331,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1200,
+      "kind": "pressure",
+      "value": 1.1288435934396372
+    },
+    {
+      "t": 1300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12192711637083438,
+      "yaw": 0.0003792430938247312,
+      "eyeOpenness": 0.08099202821504597,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1300,
+      "kind": "pressure",
+      "value": 0.871156406560363
+    },
+    {
+      "t": 1400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12197089945997691,
+      "yaw": 0.00029367495376887086,
+      "eyeOpenness": 0.0809998838616941,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1400,
+      "kind": "pressure",
+      "value": 0.6833105316368935
+    },
+    {
+      "t": 1500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199498997320811,
+      "yaw": 0.00020568141905184852,
+      "eyeOpenness": 0.08099540795775177,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1500,
+      "kind": "pressure",
+      "value": 0.6671302192966961
+    },
+    {
+      "t": 1600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.121999147206083,
+      "yaw": 0.00011598920826706291,
+      "eyeOpenness": 0.08097865570446584,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1600,
+      "kind": "pressure",
+      "value": 0.8313862140643993
+    },
+    {
+      "t": 1700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12198332962090493,
+      "yaw": 0.00002533906898727637,
+      "eyeOpenness": 0.08094983370709001,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1700,
+      "kind": "pressure",
+      "value": 1.0870414605076992
+    },
+    {
+      "t": 1800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12194769526175639,
+      "yaw": -0.0000655203399011435,
+      "eyeOpenness": 0.08090929742682568,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1800,
+      "kind": "pressure",
+      "value": 1.2955147739257051
+    },
+    {
+      "t": 1900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 1900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12189260017537483,
+      "yaw": -0.00015583863120171865,
+      "eyeOpenness": 0.08085754679692511,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 1900,
+      "kind": "pressure",
+      "value": 1.343800537755041
+    },
+    {
+      "t": 2000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12181859485365136,
+      "yaw": -0.0002448698866850789,
+      "eyeOpenness": 0.08079522005702305,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2000,
+      "kind": "pressure",
+      "value": 1.2057248383023658
+    },
+    {
+      "t": 2100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12172641873329774,
+      "yaw": -0.00033187881745799525,
+      "eyeOpenness": 0.08072308588173832,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2100,
+      "kind": "pressure",
+      "value": 0.956133368252494
+    },
+    {
+      "t": 2200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12161699280763917,
+      "yaw": -0.0004161468365471424,
+      "eyeOpenness": 0.08064203390062283,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2200,
+      "kind": "pressure",
+      "value": 0.7303203650284735
+    },
+    {
+      "t": 2300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12149141042435344,
+      "yaw": -0.0004969779935455058,
+      "eyeOpenness": 0.08055306372637547,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2300,
+      "kind": "pressure",
+      "value": 0.6506906450501049
+    },
+    {
+      "t": 2400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1213509263611023,
+      "yaw": -0.0005737047223085319,
+      "eyeOpenness": 0.08045727262663581,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2400,
+      "kind": "pressure",
+      "value": 0.7604085129249589
+    },
+    {
+      "t": 2500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1211969442882079,
+      "yaw": -0.0006456933542311118,
+      "eyeOpenness": 0.08035584199140107,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2500,
+      "kind": "pressure",
+      "value": 0.9999999999999998
+    },
+    {
+      "t": 2600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12103100274364292,
+      "yaw": -0.0007123493515724923,
+      "eyeOpenness": 0.08025002276296336,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2600,
+      "kind": "pressure",
+      "value": 1.2395914870750406
+    },
+    {
+      "t": 2700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12085475976046765,
+      "yaw": -0.0007731222176082798,
+      "eyeOpenness": 0.08014112000805987,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2700,
+      "kind": "pressure",
+      "value": 1.3493093549498951
+    },
+    {
+      "t": 2800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1206699763003118,
+      "yaw": -0.0008275100430577031,
+      "eyeOpenness": 0.08003047682250698,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2800,
+      "kind": "pressure",
+      "value": 1.269679634971527
+    },
+    {
+      "t": 2900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 2900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12047849865842795,
+      "yaw": -0.0008750636512382281,
+      "eyeOpenness": 0.0799194577668226,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 2900,
+      "kind": "pressure",
+      "value": 1.0438666317475065
+    },
+    {
+      "t": 3000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12028224001611973,
+      "yaw": -0.0009153903077136358,
+      "eyeOpenness": 0.07980943203712451,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3000,
+      "kind": "pressure",
+      "value": 0.7942751616976347
+    },
+    {
+      "t": 3100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12008316132486657,
+      "yaw": -0.000948156963798423,
+      "eyeOpenness": 0.0797017565788581,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3100,
+      "kind": "pressure",
+      "value": 0.6561994622449591
+    },
+    {
+      "t": 3200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11988325171314483,
+      "yaw": -0.0009730930071311598,
+      "eyeOpenness": 0.07959775935161127,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3200,
+      "kind": "pressure",
+      "value": 0.7044852260742943
+    },
+    {
+      "t": 3300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1196845086117135,
+      "yaw": -0.0009899924966004455,
+      "eyeOpenness": 0.07949872295141165,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3300,
+      "kind": "pressure",
+      "value": 0.9129585394922998
+    },
+    {
+      "t": 3400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11948891779594634,
+      "yaw": -0.0009987158631657163,
+      "eyeOpenness": 0.07940586879249158,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3400,
+      "kind": "pressure",
+      "value": 1.1686137859356003
+    },
+    {
+      "t": 3500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11929843354462076,
+      "yaw": -0.0009991910625262127,
+      "eyeOpenness": 0.07932034204360726,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3500,
+      "kind": "pressure",
+      "value": 1.3328697807033036
+    },
+    {
+      "t": 3600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11911495911341029,
+      "yaw": -0.0009914141701184772,
+      "eyeOpenness": 0.07924319750469207,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3600,
+      "kind": "pressure",
+      "value": 1.3166894683631072
+    },
+    {
+      "t": 3700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11894032771818301,
+      "yaw": -0.0009754494135284317,
+      "eyeOpenness": 0.07917538659802702,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3700,
+      "kind": "pressure",
+      "value": 1.1288435934396381
+    },
+    {
+      "t": 3800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11877628421811456,
+      "yaw": -0.0009514286420503496,
+      "eyeOpenness": 0.07911774563436592,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3800,
+      "kind": "pressure",
+      "value": 0.8711564065603637
+    },
+    {
+      "t": 3900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 3900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11862446768163205,
+      "yaw": -0.0009195502377735176,
+      "eyeOpenness": 0.07907098549872923,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 3900,
+      "kind": "pressure",
+      "value": 0.6833105316368938
+    },
+    {
+      "t": 4000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11848639500938414,
+      "yaw": -0.0008800774771896732,
+      "eyeOpenness": 0.07903568288307122,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4000,
+      "kind": "pressure",
+      "value": 0.6671302192966961
+    },
+    {
+      "t": 4100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11836344577787118,
+      "yaw": -0.0008333363568523283,
+      "eyeOpenness": 0.07901227317394789,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4100,
+      "kind": "pressure",
+      "value": 0.8313862140643979
+    },
+    {
+      "t": 4200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11825684845517281,
+      "yaw": -0.0007797129010453654,
+      "eyeOpenness": 0.07900104508290208,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4200,
+      "kind": "pressure",
+      "value": 1.0870414605076983
+    },
+    {
+      "t": 4300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11816766812650109,
+      "yaw": -0.0007196499736962603,
+      "eyeOpenness": 0.07900213708578889,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4300,
+      "kind": "pressure",
+      "value": 1.2955147739257054
+    },
+    {
+      "t": 4400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11809679585222096,
+      "yaw": -0.0006536436208636119,
+      "eyeOpenness": 0.07901553571495538,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4400,
+      "kind": "pressure",
+      "value": 1.3438005377550408
+    },
+    {
+      "t": 4500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1180449397646698,
+      "yaw": -0.000582238974005546,
+      "eyeOpenness": 0.07904107572533686,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4500,
+      "kind": "pressure",
+      "value": 1.205724838302366
+    },
+    {
+      "t": 4600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11801261799273306,
+      "yaw": -0.0005060257478629665,
+      "eyeOpenness": 0.07907844213242146,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4600,
+      "kind": "pressure",
+      "value": 0.9561333682524955
+    },
+    {
+      "t": 4700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800015348487179,
+      "yaw": -0.00042563337013961137,
+      "eyeOpenness": 0.07912717409694875,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4700,
+      "kind": "pressure",
+      "value": 0.7303203650284744
+    },
+    {
+      "t": 4800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800767078232831,
+      "yaw": -0.0003417257832017806,
+      "eyeOpenness": 0.07918667060843242,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4800,
+      "kind": "pressure",
+      "value": 0.650690645050105
+    },
+    {
+      "t": 4900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 4900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11803509477475133,
+      "yaw": -0.0002549959607293141,
+      "eyeOpenness": 0.07925619789741244,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 4900,
+      "kind": "pressure",
+      "value": 0.7604085129249597
+    },
+    {
+      "t": 5000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11808215145067372,
+      "yaw": -0.0001661601846035518,
+      "eyeOpenness": 0.07933489848502118,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5000,
+      "kind": "pressure",
+      "value": 0.9999999999999994
+    },
+    {
+      "t": 5100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11814837063534453,
+      "yaw": -0.00007595212929816262,
+      "eyeOpenness": 0.0794218017582557,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5100,
+      "kind": "pressure",
+      "value": 1.2395914870750395
+    },
+    {
+      "t": 5200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1182330906885597,
+      "yaw": 0.000014883197371500358,
+      "eyeOpenness": 0.0795158359405313,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5200,
+      "kind": "pressure",
+      "value": 1.349309354949895
+    },
+    {
+      "t": 5300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1183354651155522,
+      "yaw": 0.00010559560709852797,
+      "eyeOpenness": 0.07961584130988388,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5300,
+      "kind": "pressure",
+      "value": 1.2696796349715278
+    },
+    {
+      "t": 5400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11845447102488803,
+      "yaw": 0.00019543592671908872,
+      "eyeOpenness": 0.07972058450180107,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5400,
+      "kind": "pressure",
+      "value": 1.043866631747508
+    },
+    {
+      "t": 5500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1185889193488592,
+      "yaw": 0.0002836621854632263,
+      "eyeOpenness": 0.07982877372028577,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5500,
+      "kind": "pressure",
+      "value": 0.7942751616976369
+    },
+    {
+      "t": 5600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11873746672425535,
+      "yaw": 0.00036954574272272326,
+      "eyeOpenness": 0.07993907466955401,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5600,
+      "kind": "pressure",
+      "value": 0.6561994622449594
+    },
+    {
+      "t": 5700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11889862891480472,
+      "yaw": 0.0004523773057281912,
+      "eyeOpenness": 0.08005012700988218,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5700,
+      "kind": "pressure",
+      "value": 0.7044852260742955
+    },
+    {
+      "t": 5800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11907079564117248,
+      "yaw": 0.0005314727874367585,
+      "eyeOpenness": 0.08016056113465352,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5800,
+      "kind": "pressure",
+      "value": 0.9129585394923008
+    },
+    {
+      "t": 5900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 5900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11925224667033953,
+      "yaw": 0.0006061789562513957,
+      "eyeOpenness": 0.0802690150616932,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 5900,
+      "kind": "pressure",
+      "value": 1.1686137859356012
+    },
+    {
+      "t": 6000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11944116900360215,
+      "yaw": 0.0006758788309121297,
+      "eyeOpenness": 0.08037415123057122,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6000,
+      "kind": "pressure",
+      "value": 1.3328697807033034
+    },
+    {
+      "t": 6100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1196356749914558,
+      "yaw": 0.0007399967760039677,
+      "eyeOpenness": 0.08047467299871228,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6100,
+      "kind": "pressure",
+      "value": 1.3166894683631076
+    },
+    {
+      "t": 6200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.119833821194365,
+      "yaw": 0.0007980032559988884,
+      "eyeOpenness": 0.08056934063286657,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6200,
+      "kind": "pressure",
+      "value": 1.1288435934396384
+    },
+    {
+      "t": 6300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1200336278009687,
+      "yaw": 0.0008494192085693527,
+      "eyeOpenness": 0.0806569865987188,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6300,
+      "kind": "pressure",
+      "value": 0.8711564065603652
+    },
+    {
+      "t": 6400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12023309840970098,
+      "yaw": 0.0008938200010551269,
+      "eyeOpenness": 0.08073652996006889,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6400,
+      "kind": "pressure",
+      "value": 0.6833105316368939
+    },
+    {
+      "t": 6500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12043023997617562,
+      "yaw": 0.0009308389374078612,
+      "eyeOpenness": 0.08080698970999976,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6500,
+      "kind": "pressure",
+      "value": 0.667130219296696
+    },
+    {
+      "t": 6600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12062308272702675,
+      "yaw": 0.0009601702866503661,
+      "eyeOpenness": 0.0808674968696188,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6600,
+      "kind": "pressure",
+      "value": 0.8313862140643977
+    },
+    {
+      "t": 6700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12080969984123319,
+      "yaw": 0.0009815718078392294,
+      "eyeOpenness": 0.08091730520515976,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6700,
+      "kind": "pressure",
+      "value": 1.0870414605077003
+    },
+    {
+      "t": 6800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12098822670227721,
+      "yaw": 0.0009948667506776826,
+      "eyeOpenness": 0.08095580043127103,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6800,
+      "kind": "pressure",
+      "value": 1.2955147739257051
+    },
+    {
+      "t": 6900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 6900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12115687952877639,
+      "yaw": 0.0009999453152561078,
+      "eyeOpenness": 0.08098250778698637,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 6900,
+      "kind": "pressure",
+      "value": 1.3438005377550408
+    },
+    {
+      "t": 7000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12131397319743757,
+      "yaw": 0.0009967655588645232,
+      "eyeOpenness": 0.08099709789094388,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7000,
+      "kind": "pressure",
+      "value": 1.2057248383023662
+    },
+    {
+      "t": 7100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12145793808025175,
+      "yaw": 0.0009853537423878864,
+      "eyeOpenness": 0.08099939080364059,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7100,
+      "kind": "pressure",
+      "value": 0.9561333682524957
+    },
+    {
+      "t": 7200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1215873357276983,
+      "yaw": 0.0009658041134234179,
+      "eyeOpenness": 0.08098935824662339,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7200,
+      "kind": "pressure",
+      "value": 0.7303203650284746
+    },
+    {
+      "t": 7300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12170087324125713,
+      "yaw": 0.000938278127911128,
+      "eyeOpenness": 0.08096712395124661,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7300,
+      "kind": "pressure",
+      "value": 0.6506906450501049
+    },
+    {
+      "t": 7400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12179741619162325,
+      "yaw": 0.0009030031167059227,
+      "eyeOpenness": 0.08093296213269546,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7400,
+      "kind": "pressure",
+      "value": 0.7604085129249577
+    },
+    {
+      "t": 7500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12187599995354947,
+      "yaw": 0.0008602704081037683,
+      "eyeOpenness": 0.0808872941080947,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7500,
+      "kind": "pressure",
+      "value": 0.9999999999999968
+    },
+    {
+      "t": 7600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12193583934406296,
+      "yaw": 0.000810432921827544,
+      "eyeOpenness": 0.08083068310041182,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7600,
+      "kind": "pressure",
+      "value": 1.2395914870750393
+    },
+    {
+      "t": 7700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12197633646775399,
+      "yaw": 0.0007539022543433046,
+      "eyeOpenness": 0.08076382729223779,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7700,
+      "kind": "pressure",
+      "value": 1.349309354949895
+    },
+    {
+      "t": 7800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199708669074921,
+      "yaw": 0.0006911452795786652,
+      "eyeOpenness": 0.08068755121511306,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7800,
+      "kind": "pressure",
+      "value": 1.269679634971528
+    },
+    {
+      "t": 7900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 7900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199788268367955,
+      "yaw": 0.0006226802931172001,
+      "eyeOpenness": 0.0806027955805942,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 7900,
+      "kind": "pressure",
+      "value": 1.0438666317475058
+    },
+    {
+      "t": 8000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12197871649324676,
+      "yaw": 0.0005490727317130796,
+      "eyeOpenness": 0.08051060567847429,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8000,
+      "kind": "pressure",
+      "value": 0.7942751616976351
+    },
+    {
+      "t": 8100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12193977962169017,
+      "yaw": 0.00047093050347749797,
+      "eyeOpenness": 0.08041211848524175,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8100,
+      "kind": "pressure",
+      "value": 0.6561994622449594
+    },
+    {
+      "t": 8200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12188146111335954,
+      "yaw": 0.00038889896730382226,
+      "eyeOpenness": 0.08030854864176881,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8200,
+      "kind": "pressure",
+      "value": 0.7044852260742926
+    },
+    {
+      "t": 8300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12180434366751258,
+      "yaw": 0.00030365560299524635,
+      "eyeOpenness": 0.08020117347316627,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8300,
+      "kind": "pressure",
+      "value": 0.9129585394923005
+    },
+    {
+      "t": 8400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12170919781617656,
+      "yaw": 0.00021590441611315944,
+      "eyeOpenness": 0.08009131723555475,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8400,
+      "kind": "pressure",
+      "value": 1.1686137859355987
+    },
+    {
+      "t": 8500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12159697422524697,
+      "yaw": 0.00012637012375530122,
+      "eyeOpenness": 0.07998033478403664,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8500,
+      "kind": "pressure",
+      "value": 1.3328697807033043
+    },
+    {
+      "t": 8600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12146879419574823,
+      "yaw": 0.00003579216928205632,
+      "eyeOpenness": 0.07986959486329116,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8600,
+      "kind": "pressure",
+      "value": 1.3166894683631067
+    },
+    {
+      "t": 8700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12132593846016436,
+      "yaw": -0.00005508138457810948,
+      "eyeOpenness": 0.07976046322686968,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8700,
+      "kind": "pressure",
+      "value": 1.1288435934396386
+    },
+    {
+      "t": 8800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12116983438578352,
+      "yaw": -0.00014550003380861353,
+      "eyeOpenness": 0.07965428579338046,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8800,
+      "kind": "pressure",
+      "value": 0.8711564065603608
+    },
+    {
+      "t": 8900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 8900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12100204171291576,
+      "yaw": -0.00023471703134676455,
+      "eyeOpenness": 0.07955237204729745,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 8900,
+      "kind": "pressure",
+      "value": 0.6833105316368929
+    },
+    {
+      "t": 9000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12082423697048351,
+      "yaw": -0.0003219955542979381,
+      "eyeOpenness": 0.07945597888911063,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9000,
+      "kind": "pressure",
+      "value": 0.6671302192966959
+    },
+    {
+      "t": 9100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12063819672469869,
+      "yaw": -0.00040661478918831807,
+      "eyeOpenness": 0.07936629513399374,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9100,
+      "kind": "pressure",
+      "value": 0.8313862140643975
+    },
+    {
+      "t": 9200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1204457798282005,
+      "yaw": -0.0004878758849994509,
+      "eyeOpenness": 0.07928442685016701,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9200,
+      "kind": "pressure",
+      "value": 1.0870414605076955
+    },
+    {
+      "t": 9300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12024890884701411,
+      "yaw": -0.0005651077248199003,
+      "eyeOpenness": 0.07921138371777678,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9300,
+      "kind": "pressure",
+      "value": 1.2955147739257051
+    },
+    {
+      "t": 9400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12004955085090671,
+      "yaw": -0.0006376724684471933,
+      "eyeOpenness": 0.07914806657652738,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9400,
+      "kind": "pressure",
+      "value": 1.3438005377550413
+    },
+    {
+      "t": 9500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11984969775907638,
+      "yaw": -0.0007049708201650193,
+      "eyeOpenness": 0.07909525631564054,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9500,
+      "kind": "pressure",
+      "value": 1.2057248383023684
+    },
+    {
+      "t": 9600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11965134643755404,
+      "yaw": -0.0007664469781902593,
+      "eyeOpenness": 0.07905360424316189,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9600,
+      "kind": "pressure",
+      "value": 0.9561333682524935
+    },
+    {
+      "t": 9700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11945647874717812,
+      "yaw": -0.0008215932249135326,
+      "eyeOpenness": 0.07902362405338999,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9700,
+      "kind": "pressure",
+      "value": 0.7303203650284747
+    },
+    {
+      "t": 9800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11926704174149613,
+      "yaw": -0.0008699541200234682,
+      "eyeOpenness": 0.07900568549149328,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9800,
+      "kind": "pressure",
+      "value": 0.6506906450501051
+    },
+    {
+      "t": 9900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 9900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11908492821244936,
+      "yaw": -0.0009111302618846769,
+      "eyeOpenness": 0.0790000097934493,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 9900,
+      "kind": "pressure",
+      "value": 0.7604085129249594
+    },
+    {
+      "t": 10000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11891195777822125,
+      "yaw": -0.0009447815861050271,
+      "eyeOpenness": 0.07900666695754509,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10000,
+      "kind": "pressure",
+      "value": 0.999999999999999
+    },
+    {
+      "t": 10100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11874985870221423,
+      "yaw": -0.0009706301740501315,
+      "eyeOpenness": 0.07902557488108955,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10100,
+      "kind": "pressure",
+      "value": 1.239591487075039
+    },
+    {
+      "t": 10200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11860025062481291,
+      "yaw": -0.0009884625481101504,
+      "eyeOpenness": 0.07905650037298452,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10200,
+      "kind": "pressure",
+      "value": 1.3493093549498947
+    },
+    {
+      "t": 10300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11846462838047284,
+      "yaw": -0.0009981314347628234,
+      "eyeOpenness": 0.07909906202966657,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10300,
+      "kind": "pressure",
+      "value": 1.2696796349715234
+    },
+    {
+      "t": 10400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11834434706182868,
+      "yaw": -0.000999556980872002,
+      "eyeOpenness": 0.07915273493895074,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10400,
+      "kind": "pressure",
+      "value": 1.0438666317475085
+    },
+    {
+      "t": 10500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11824060848005666,
+      "yaw": -0.0009927274131765413,
+      "eyeOpenness": 0.0792168571537634,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10500,
+      "kind": "pressure",
+      "value": 0.7942751616976333
+    },
+    {
+      "t": 10600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11815444915677438,
+      "yaw": -0.0009776991355229866,
+      "eyeOpenness": 0.07929063785592437,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10600,
+      "kind": "pressure",
+      "value": 0.65619946224496
+    },
+    {
+      "t": 10700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11808672996745961,
+      "yaw": -0.0009545962630390319,
+      "eyeOpenness": 0.07937316710929389,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10700,
+      "kind": "pressure",
+      "value": 0.7044852260742939
+    },
+    {
+      "t": 10800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11803812753986702,
+      "yaw": -0.000923609597094902,
+      "eyeOpenness": 0.07946342708199956,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10800,
+      "kind": "pressure",
+      "value": 0.9129585394922979
+    },
+    {
+      "t": 10900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 10900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800912749338724,
+      "yaw": -0.0008849950495182279,
+      "eyeOpenness": 0.07956030459933947,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 10900,
+      "kind": "pressure",
+      "value": 1.1686137859356007
+    },
+    {
+      "t": 11000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800001958689858,
+      "yaw": -0.0008390715290764525,
+      "eyeOpenness": 0.07966260487254669,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11000,
+      "kind": "pressure",
+      "value": 1.3328697807033019
+    },
+    {
+      "t": 11100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11801089482359202,
+      "yaw": -0.0007862183076818446,
+      "eyeOpenness": 0.07976906623409884,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11100,
+      "kind": "pressure",
+      "value": 1.3166894683631079
+    },
+    {
+      "t": 11200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11804164454169735,
+      "yaw": -0.0007268718880710217,
+      "eyeOpenness": 0.079878375697842,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11200,
+      "kind": "pressure",
+      "value": 1.1288435934396412
+    },
+    {
+      "t": 11300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11809196150019582,
+      "yaw": -0.0006615223988281044,
+      "eyeOpenness": 0.0799891851520266,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11300,
+      "kind": "pressure",
+      "value": 0.8711564065603633
+    },
+    {
+      "t": 11400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11816134294867064,
+      "yaw": -0.0005907095465242053,
+      "eyeOpenness": 0.08010012798554657,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11400,
+      "kind": "pressure",
+      "value": 0.6833105316368919
+    },
+    {
+      "t": 11500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11824909565062314,
+      "yaw": -0.0005150181584035772,
+      "eyeOpenness": 0.08020983594233076,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11500,
+      "kind": "pressure",
+      "value": 0.6671302192966951
+    },
+    {
+      "t": 11600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11835434281006257,
+      "yaw": -0.0004350733524284043,
+      "eyeOpenness": 0.08031695599602172,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11600,
+      "kind": "pressure",
+      "value": 0.8313862140643995
+    },
+    {
+      "t": 11700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11847603283216193,
+      "yaw": -0.00035153537457169364,
+      "eyeOpenness": 0.08042016703682664,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11700,
+      "kind": "pressure",
+      "value": 1.0870414605076928
+    },
+    {
+      "t": 11800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11861294983044575,
+      "yaw": -0.000265094145995937,
+      "eyeOpenness": 0.0805181961647419,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11800,
+      "kind": "pressure",
+      "value": 1.2955147739257062
+    },
+    {
+      "t": 11900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 11900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11876372577552594,
+      "yaw": -0.00017646356515110538,
+      "eyeOpenness": 0.08060983438820706,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 11900,
+      "kind": "pressure",
+      "value": 1.343800537755042
+    },
+    {
+      "t": 12000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11892685416399913,
+      "yaw": -0.00008637561184970585,
+      "eyeOpenness": 0.08069395153457706,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 12000,
+      "kind": "pressure",
+      "value": 1.2057248383023667
+    },
+    {
+      "t": 12100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11910070507093079,
+      "yaw": 0.000004425697988050785,
+      "eyeOpenness": 0.08076951018852228,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12100,
+      "kind": "pressure",
+      "value": 0.9561333682524962
+    },
+    {
+      "t": 12200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11928354143552634,
+      "yaw": 0.00009519045699253283,
+      "eyeOpenness": 0.08083557848645398,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12200,
+      "kind": "pressure",
+      "value": 0.7303203650284765
+    },
+    {
+      "t": 12300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11947353641726839,
+      "yaw": 0.00018516905965912885,
+      "eyeOpenness": 0.08089134160918209,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12300,
+      "kind": "pressure",
+      "value": 0.6506906450501053
+    },
+    {
+      "t": 12400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11966879164910338,
+      "yaw": 0.00027361839316965443,
+      "eyeOpenness": 0.08093611183106628,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12400,
+      "kind": "pressure",
+      "value": 0.7604085129249574
+    },
+    {
+      "t": 12500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11986735620529759,
+      "yaw": 0.0003598079745921208,
+      "eyeOpenness": 0.08096933700172465,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12500,
+      "kind": "pressure",
+      "value": 1.000000000000001
+    },
+    {
+      "t": 12600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12006724609444226,
+      "yaw": 0.00044302598377317083,
+      "eyeOpenness": 0.08099060735569487,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12600,
+      "kind": "pressure",
+      "value": 1.239591487075037
+    },
+    {
+      "t": 12700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12026646408283988,
+      "yaw": 0.0005225851420988441,
+      "eyeOpenness": 0.0809996605660647,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12700,
+      "kind": "pressure",
+      "value": 1.349309354949895
+    },
+    {
+      "t": 12800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12046301965020308,
+      "yaw": 0.0005978283885723739,
+      "eyeOpenness": 0.08099638497974522,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12800,
+      "kind": "pressure",
+      "value": 1.2696796349715282
+    },
+    {
+      "t": 12900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 12900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12065494887827538,
+      "yaw": 0.0006681343063315318,
+      "eyeOpenness": 0.0809808209944866,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 12900,
+      "kind": "pressure",
+      "value": 1.0438666317475063
+    },
+    {
+      "t": 13000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12084033407365327,
+      "yaw": 0.000732922254789192,
+      "eyeOpenness": 0.08095316056065323,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 13000,
+      "kind": "pressure",
+      "value": 0.7942751616976356
+    },
+    {
+      "t": 13100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12101732292874474,
+      "yaw": 0.000791657165011893,
+      "eyeOpenness": 0.08091374481390319,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13100,
+      "kind": "pressure",
+      "value": 0.6561994622449595
+    },
+    {
+      "t": 13200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12118414702941444,
+      "yaw": 0.0008438539587324921,
+      "eyeOpenness": 0.08086305986796802,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13200,
+      "kind": "pressure",
+      "value": 0.7044852260742924
+    },
+    {
+      "t": 13300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1213391395243932,
+      "yaw": 0.0008890815545012596,
+      "eyeOpenness": 0.08080173081942035,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13300,
+      "kind": "pressure",
+      "value": 0.9129585394923
+    },
+    {
+      "t": 13400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12148075177990489,
+      "yaw": 0.0009269664278895466,
+      "eyeOpenness": 0.08073051403836855,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13400,
+      "kind": "pressure",
+      "value": 1.1686137859356025
+    },
+    {
+      "t": 13500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12160756885310324,
+      "yaw": 0.0009571956963431034,
+      "eyeOpenness": 0.08065028784015713,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13500,
+      "kind": "pressure",
+      "value": 1.3328697807033025
+    },
+    {
+      "t": 13600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.121718323629713,
+      "yaw": 0.000979519703207941,
+      "eyeOpenness": 0.0805620416531185,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13600,
+      "kind": "pressure",
+      "value": 1.316689468363107
+    },
+    {
+      "t": 13700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12181190948461693,
+      "yaw": 0.0009937540795878677,
+      "eyeOpenness": 0.0804668638159704,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13700,
+      "kind": "pressure",
+      "value": 1.1288435934396437
+    },
+    {
+      "t": 13800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1218873913388882,
+      "yaw": 0.0009997812670052742,
+      "eyeOpenness": 0.08036592815535293,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13800,
+      "kind": "pressure",
+      "value": 0.8711564065603612
+    },
+    {
+      "t": 13900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 13900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12194401500278995,
+      "yaw": 0.0009975514882898694,
+      "eyeOpenness": 0.08026047950904475,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 13900,
+      "kind": "pressure",
+      "value": 0.6833105316368953
+    },
+    {
+      "t": 14000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12198121471138973,
+      "yaw": 0.0009870831586770105,
+      "eyeOpenness": 0.08015181837339991,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 14000,
+      "kind": "pressure",
+      "value": 0.6671302192966958
+    },
+    {
+      "t": 14100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199861877749583,
+      "yaw": 0.0009684627337204588,
+      "eyeOpenness": 0.08004128486434867,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14100,
+      "kind": "pressure",
+      "value": 0.8313862140643971
+    },
+    {
+      "t": 14200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199605330543271,
+      "yaw": 0.0009418439952756262,
+      "eyeOpenness": 0.07993024218977046,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14200,
+      "kind": "pressure",
+      "value": 1.0870414605076948
+    },
+    {
+      "t": 14300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12197354392854923,
+      "yaw": 0.0009074467814501962,
+      "eyeOpenness": 0.0798200598370745,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14300,
+      "kind": "pressure",
+      "value": 1.2955147739257074
+    },
+    {
+      "t": 14400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12193131555309855,
+      "yaw": 0.0008655551710111886,
+      "eyeOpenness": 0.07971209668333494,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14400,
+      "kind": "pressure",
+      "value": 1.3438005377550415
+    },
+    {
+      "t": 14500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12186979011104936,
+      "yaw": 0.0008165151372430205,
+      "eyeOpenness": 0.07960768423628305,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14500,
+      "kind": "pressure",
+      "value": 1.2057248383023649
+    },
+    {
+      "t": 14600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.121789582344281,
+      "yaw": 0.0007607316906328226,
+      "eyeOpenness": 0.07950811021284519,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14600,
+      "kind": "pressure",
+      "value": 0.956133368252499
+    },
+    {
+      "t": 14700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12169149366228586,
+      "yaw": 0.0006986655339809321,
+      "eyeOpenness": 0.07941460265775192,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14700,
+      "kind": "pressure",
+      "value": 0.7303203650284751
+    },
+    {
+      "t": 14800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12157650413475063,
+      "yaw": 0.0006308292575612206,
+      "eyeOpenness": 0.07932831479808332,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14800,
+      "kind": "pressure",
+      "value": 0.6506906450501048
+    },
+    {
+      "t": 14900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 14900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12144576269902395,
+      "yaw": 0.0005577831057545957,
+      "eyeOpenness": 0.07925031082053906,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 14900,
+      "kind": "pressure",
+      "value": 0.7604085129249589
+    },
+    {
+      "t": 15000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12130057568031423,
+      "yaw": 0.0004801303501180481,
+      "eyeOpenness": 0.07918155274684206,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 15000,
+      "kind": "pressure",
+      "value": 0.9999999999999934
+    },
+    {
+      "t": 15100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12114239373931997,
+      "yaw": 0.00039851230710205923,
+      "eyeOpenness": 0.07912288856914099,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15100,
+      "kind": "pressure",
+      "value": 1.2395914870750389
+    },
+    {
+      "t": 15200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1209727973777076,
+      "yaw": 0.0003136030415638601,
+      "eyeOpenness": 0.07907504179173759,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15200,
+      "kind": "pressure",
+      "value": 1.3493093549498947
+    },
+    {
+      "t": 15300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12079348114626122,
+      "yaw": 0.00022610379981907126,
+      "eyeOpenness": 0.07903860250812045,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15300,
+      "kind": "pressure",
+      "value": 1.269679634971527
+    },
+    {
+      "t": 15400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1206062367134914,
+      "yaw": 0.0001367372182078336,
+      "eyeOpenness": 0.07901402012335211,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15400,
+      "kind": "pressure",
+      "value": 1.043866631747509
+    },
+    {
+      "t": 15500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12041293496387559,
+      "yaw": 0.00004624135500561476,
+      "eyeOpenness": 0.07900159781156414,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15500,
+      "kind": "pressure",
+      "value": 0.7942751616976377
+    },
+    {
+      "t": 15600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12021550730459889,
+      "yaw": -0.000044636405032257493,
+      "eyeOpenness": 0.07900148877691564,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15600,
+      "kind": "pressure",
+      "value": 0.6561994622449601
+    },
+    {
+      "t": 15700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12001592636757187,
+      "yaw": -0.00013514552315133885,
+      "eyeOpenness": 0.07901369436412908,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15700,
+      "kind": "pressure",
+      "value": 0.7044852260742909
+    },
+    {
+      "t": 15800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11981618629954463,
+      "yaw": -0.00022453850512695565,
+      "eyeOpenness": 0.0790380640419058,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15800,
+      "kind": "pressure",
+      "value": 0.9129585394923021
+    },
+    {
+      "t": 15900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 15900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11961828283725162,
+      "yaw": -0.00031207707464903946,
+      "eyeOpenness": 0.07907429725942597,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 15900,
+      "kind": "pressure",
+      "value": 1.1686137859355958
+    },
+    {
+      "t": 16000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11942419336666986,
+      "yaw": -0.00039703827057827317,
+      "eyeOpenness": 0.07912194715303668,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 16000,
+      "kind": "pressure",
+      "value": 1.3328697807033032
+    },
+    {
+      "t": 16100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11923585716563198,
+      "yaw": -0.00047872041771775223,
+      "eyeOpenness": 0.0791804260574138,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16100,
+      "kind": "pressure",
+      "value": 1.316689468363108
+    },
+    {
+      "t": 16200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11905515602720307,
+      "yaw": -0.0005564489217888606,
+      "eyeOpenness": 0.07924901275322832,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16200,
+      "kind": "pressure",
+      "value": 1.1288435934396417
+    },
+    {
+      "t": 16300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11888389545742643,
+      "yaw": -0.0006295818407520275,
+      "eyeOpenness": 0.0793268613619321,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16300,
+      "kind": "pressure",
+      "value": 0.8711564065603639
+    },
+    {
+      "t": 16400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1187237866353041,
+      "yaw": -0.0006975151864600412,
+      "eyeOpenness": 0.07941301177796342,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16400,
+      "kind": "pressure",
+      "value": 0.6833105316368964
+    },
+    {
+      "t": 16500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11857642931526174,
+      "yaw": -0.0007596879128588213,
+      "eyeOpenness": 0.07950640150971268,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16500,
+      "kind": "pressure",
+      "value": 0.667130219296695
+    },
+    {
+      "t": 16600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1184432958429314,
+      "yaw": -0.0008155865495391866,
+      "eyeOpenness": 0.07960587878321308,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16600,
+      "kind": "pressure",
+      "value": 0.831386214064399
+    },
+    {
+      "t": 16700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1183257164439605,
+      "yaw": -0.0008647494423722064,
+      "eyeOpenness": 0.0797102167469494,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16700,
+      "kind": "pressure",
+      "value": 1.0870414605076921
+    },
+    {
+      "t": 16800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11822486593283699,
+      "yaw": -0.0009067705662056714,
+      "eyeOpenness": 0.07981812860259674,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16800,
+      "kind": "pressure",
+      "value": 1.2955147739257034
+    },
+    {
+      "t": 16900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 16900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11814175197453126,
+      "yaw": -0.0009413028781334905,
+      "eyeOpenness": 0.07992828347508228,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 16900,
+      "kind": "pressure",
+      "value": 1.343800537755043
+    },
+    {
+      "t": 17000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11807720501624089,
+      "yaw": -0.0009680611836441397,
+      "eyeOpenness": 0.08003932282624489,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 17000,
+      "kind": "pressure",
+      "value": 1.205724838302363
+    },
+    {
+      "t": 17100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11803186998983671,
+      "yaw": -0.0009868244919772743,
+      "eyeOpenness": 0.08014987720966295,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17100,
+      "kind": "pressure",
+      "value": 0.9561333682524967
+    },
+    {
+      "t": 17200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1180061998679168,
+      "yaw": -0.0009974378412361694,
+      "eyeOpenness": 0.08025858316001382,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17200,
+      "kind": "pressure",
+      "value": 0.7303203650284736
+    },
+    {
+      "t": 17300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800045113785397,
+      "yaw": -0.0009998135781827823,
+      "eyeOpenness": 0.08036410000866827,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17300,
+      "kind": "pressure",
+      "value": 0.6506906450501047
+    },
+    {
+      "t": 17400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11801468123905873,
+      "yaw": -0.0009939320821459167,
+      "eyeOpenness": 0.08046512641813382,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17400,
+      "kind": "pressure",
+      "value": 0.7604085129249569
+    },
+    {
+      "t": 17500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11804874798906367,
+      "yaw": -0.0009798419270638827,
+      "eyeOpenness": 0.08056041643142786,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17500,
+      "kind": "pressure",
+      "value": 0.9999999999999908
+    },
+    {
+      "t": 17600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11810231100416375,
+      "yaw": -0.0009576594803233847,
+      "eyeOpenness": 0.08064879483844378,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17600,
+      "kind": "pressure",
+      "value": 1.2395914870750442
+    },
+    {
+      "t": 17700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11817483510041762,
+      "yaw": -0.00092756794170774,
+      "eyeOpenness": 0.08072917166979714,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17700,
+      "kind": "pressure",
+      "value": 1.3493093549498942
+    },
+    {
+      "t": 17800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11826559564102883,
+      "yaw": -0.000889815830391524,
+      "eyeOpenness": 0.08080055563939953,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17800,
+      "kind": "pressure",
+      "value": 1.2696796349715256
+    },
+    {
+      "t": 17900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 17900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11837368577667702,
+      "yaw": -0.0008447149324772269,
+      "eyeOpenness": 0.08086206636997292,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 17900,
+      "kind": "pressure",
+      "value": 1.0438666317475118
+    },
+    {
+      "t": 18000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11849802550645665,
+      "yaw": -0.0007926377260247273,
+      "eyeOpenness": 0.08091294525072763,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 18000,
+      "kind": "pressure",
+      "value": 0.7942751616976359
+    },
+    {
+      "t": 18100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.118637372468889,
+      "yaw": -0.0007340143048397005,
+      "eyeOpenness": 0.08095256479329618,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18100,
+      "kind": "pressure",
+      "value": 0.6561994622449587
+    },
+    {
+      "t": 18200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11879033435518743,
+      "yaw": -0.0006693288264266792,
+      "eyeOpenness": 0.08098043637053672,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18200,
+      "kind": "pressure",
+      "value": 0.7044852260742922
+    },
+    {
+      "t": 18300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11895538282074654,
+      "yaw": -0.0005991155134423312,
+      "eyeOpenness": 0.08099621624276311,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18300,
+      "kind": "pressure",
+      "value": 0.9129585394922994
+    },
+    {
+      "t": 18400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1191308687558562,
+      "yaw": -0.0005239542416720051,
+      "eyeOpenness": 0.08099970979708065,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18400,
+      "kind": "pressure",
+      "value": 1.1686137859355934
+    },
+    {
+      "t": 18500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11931503876306077,
+      "yaw": -0.00044446575096749436,
+      "eyeOpenness": 0.08099087394754365,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18500,
+      "kind": "pressure",
+      "value": 1.3328697807033023
+    },
+    {
+      "t": 18600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11950605267652675,
+      "yaw": -0.0003613065186977519,
+      "eyeOpenness": 0.0809698176665335,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18600,
+      "kind": "pressure",
+      "value": 1.3166894683631072
+    },
+    {
+      "t": 18700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11970200194837159,
+      "yaw": -0.00027516333805159695,
+      "eyeOpenness": 0.08093680064080434,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18700,
+      "kind": "pressure",
+      "value": 1.1288435934396441
+    },
+    {
+      "t": 18800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11990092871824326,
+      "yaw": -0.0001867476459689267,
+      "eyeOpenness": 0.08089223006877061,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18800,
+      "kind": "pressure",
+      "value": 0.8711564065603663
+    },
+    {
+      "t": 18900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 18900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12010084537561362,
+      "yaw": -0.0000967896475448205,
+      "eyeOpenness": 0.08083665563853606,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 18900,
+      "kind": "pressure",
+      "value": 0.6833105316368976
+    },
+    {
+      "t": 19000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1202997544193259,
+      "yaw": -0.000006032285431719937,
+      "eyeOpenness": 0.08077076274859966,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 19000,
+      "kind": "pressure",
+      "value": 0.6671302192966941
+    },
+    {
+      "t": 19100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12049566841596591,
+      "yaw": 0.0000847748959550127,
+      "eyeOpenness": 0.0806953640548477,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19100,
+      "kind": "pressure",
+      "value": 0.8313862140643966
+    },
+    {
+      "t": 19200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12068662985763978,
+      "yaw": 0.0001748819407539597,
+      "eyeOpenness": 0.08061138944808258,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19200,
+      "kind": "pressure",
+      "value": 1.0870414605076992
+    },
+    {
+      "t": 19300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12087073072074578,
+      "yaw": 0.0002635446753725733,
+      "eyeOpenness": 0.08051987458569544,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19300,
+      "kind": "pressure",
+      "value": 1.2955147739257018
+    },
+    {
+      "t": 19400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12104613153031539,
+      "yaw": 0.00035003085444763725,
+      "eyeOpenness": 0.08042194811892121,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19400,
+      "kind": "pressure",
+      "value": 1.3438005377550417
+    },
+    {
+      "t": 19500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1212110797394392,
+      "yaw": 0.00043362620829322853,
+      "eyeOpenness": 0.08031881777320228,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19500,
+      "kind": "pressure",
+      "value": 1.2057248383023733
+    },
+    {
+      "t": 19600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12136392724013627,
+      "yaw": 0.0005136403418916139,
+      "eyeOpenness": 0.08021175545333113,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19600,
+      "kind": "pressure",
+      "value": 0.9561333682524896
+    },
+    {
+      "t": 19700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12150314683070429,
+      "yaw": 0.0005894124367087114,
+      "eyeOpenness": 0.08010208155707038,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19700,
+      "kind": "pressure",
+      "value": 0.7303203650284817
+    },
+    {
+      "t": 19800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1216273474750142,
+      "yaw": 0.0006603167082440802,
+      "eyeOpenness": 0.0799911486907096,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19800,
+      "kind": "pressure",
+      "value": 0.6506906450501051
+    },
+    {
+      "t": 19900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 19900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12173528820128333,
+      "yaw": 0.000725767574242824,
+      "eyeOpenness": 0.07988032498739514,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 19900,
+      "kind": "pressure",
+      "value": 0.7604085129249549
+    },
+    {
+      "t": 20000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12182589050145524,
+      "yaw": 0.0007852244908862618,
+      "eyeOpenness": 0.07977097723396734,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 20000,
+      "kind": "pressure",
+      "value": 0.9999999999999979
+    },
+    {
+      "t": 20100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12189824910729578,
+      "yaw": 0.0008381964170204009,
+      "eyeOpenness": 0.07966445401440184,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20100,
+      "kind": "pressure",
+      "value": 1.239591487075042
+    },
+    {
+      "t": 20200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12195164103553395,
+      "yaw": 0.0008842458695531772,
+      "eyeOpenness": 0.07956206907774632,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20200,
+      "kind": "pressure",
+      "value": 1.3493093549498947
+    },
+    {
+      "t": 20300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1219855328116718,
+      "yaw": 0.0009229925365278201,
+      "eyeOpenness": 0.07946508513567607,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20300,
+      "kind": "pressure",
+      "value": 1.2696796349715274
+    },
+    {
+      "t": 20400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199958580028533,
+      "yaw": 0.0009541164180328226,
+      "eyeOpenness": 0.07937469828949237,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20400,
+      "kind": "pressure",
+      "value": 1.0438666317475145
+    },
+    {
+      "t": 20500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1219936595885576,
+      "yaw": 0.0009773604690084385,
+      "eyeOpenness": 0.0792920232786256,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20500,
+      "kind": "pressure",
+      "value": 0.7942751616976381
+    },
+    {
+      "t": 20600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12196781338923723,
+      "yaw": 0.0009925327221233843,
+      "eyeOpenness": 0.07921807973257286,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20600,
+      "kind": "pressure",
+      "value": 0.6561994622449574
+    },
+    {
+      "t": 20700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12192230544900423,
+      "yaw": 0.0009995078731893717,
+      "eyeOpenness": 0.07915377959582483,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20700,
+      "kind": "pressure",
+      "value": 0.7044852260742906
+    },
+    {
+      "t": 20800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12185759046815448,
+      "yaw": 0.0009982283160199033,
+      "eyeOpenness": 0.07909991588086993,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20800,
+      "kind": "pressure",
+      "value": 0.9129585394922968
+    },
+    {
+      "t": 20900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 20900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1217743150573847,
+      "yaw": 0.0009887046181866691,
+      "eyeOpenness": 0.07905715288798482,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 20900,
+      "kind": "pressure",
+      "value": 1.1686137859355998
+    },
+    {
+      "t": 21000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12167331127707211,
+      "yaw": 0.0009710154337443748,
+      "eyeOpenness": 0.07902601801243045,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 21000,
+      "kind": "pressure",
+      "value": 1.3328697807033045
+    },
+    {
+      "t": 21100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12155558832360218,
+      "yaw": 0.000945306853644787,
+      "eyeOpenness": 0.07900689524009531,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21100,
+      "kind": "pressure",
+      "value": 1.3166894683631085
+    },
+    {
+      "t": 21200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12142232244581196,
+      "yaw": 0.0009117911992047907,
+      "eyeOpenness": 0.07900002041180407,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21200,
+      "kind": "pressure",
+      "value": 1.1288435934396468
+    },
+    {
+      "t": 21300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12127484519230047,
+      "yaw": 0.0008707452685929072,
+      "eyeOpenness": 0.07900547831469659,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21300,
+      "kind": "pressure",
+      "value": 0.8711564065603596
+    },
+    {
+      "t": 21400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12111463010703531,
+      "yaw": 0.0008225080508161691,
+      "eyeOpenness": 0.07902320163654976,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21400,
+      "kind": "pressure",
+      "value": 0.6833105316368946
+    },
+    {
+      "t": 21500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12094327800618838,
+      "yaw": 0.0007674779260869948,
+      "eyeOpenness": 0.07905297179593779,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21500,
+      "kind": "pressure",
+      "value": 0.6671302192966932
+    },
+    {
+      "t": 21600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12076250098330987,
+      "yaw": 0.0007061093756916142,
+      "eyeOpenness": 0.07909442163799338,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21600,
+      "kind": "pressure",
+      "value": 0.8313862140643942
+    },
+    {
+      "t": 21700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12057410530265546,
+      "yaw": 0.0006389092285324638,
+      "eyeOpenness": 0.07914703996252233,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21700,
+      "kind": "pressure",
+      "value": 1.0870414605076966
+    },
+    {
+      "t": 21800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12037997335159087,
+      "yaw": 0.0005664324753435415,
+      "eyeOpenness": 0.07921017782862681,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21800,
+      "kind": "pressure",
+      "value": 1.2955147739257056
+    },
+    {
+      "t": 21900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 21900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12018204483239969,
+      "yaw": 0.0004892776851481362,
+      "eyeOpenness": 0.07928305655808245,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 21900,
+      "kind": "pressure",
+      "value": 1.343800537755044
+    },
+    {
+      "t": 22000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11998229738141919,
+      "yaw": 0.00040808206181339196,
+      "eyeOpenness": 0.07936477733876343,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 22000,
+      "kind": "pressure",
+      "value": 1.2057248383023755
+    },
+    {
+      "t": 22100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11978272680915183,
+      "yaw": 0.0003235161815284512,
+      "eyeOpenness": 0.07945433230967726,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22100,
+      "kind": "pressure",
+      "value": 0.9561333682524923
+    },
+    {
+      "t": 22200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11958532715878648,
+      "yaw": 0.00023627845466820733,
+      "eyeOpenness": 0.07955061699089704,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22200,
+      "kind": "pressure",
+      "value": 0.7303203650284771
+    },
+    {
+      "t": 22300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1193920707823779,
+      "yaw": 0.0001470893577808487,
+      "eyeOpenness": 0.07965244390509361,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22300,
+      "kind": "pressure",
+      "value": 0.6506906450501049
+    },
+    {
+      "t": 22400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11920488863375713,
+      "yaw": 0.00005668548333586357,
+      "eyeOpenness": 0.0797585572226732,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22400,
+      "kind": "pressure",
+      "value": 0.7604085129249529
+    },
+    {
+      "t": 22500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11902565097507897,
+      "yaw": -0.00003418654362564971,
+      "eyeOpenness": 0.07986764824990222,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22500,
+      "kind": "pressure",
+      "value": 0.9999999999999952
+    },
+    {
+      "t": 22600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11885614868978087,
+      "yaw": -0.0001247762316974208,
+      "eyeOpenness": 0.07997837156900495,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22600,
+      "kind": "pressure",
+      "value": 1.23959148707504
+    },
+    {
+      "t": 22700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1186980753886675,
+      "yaw": -0.00021433542124585486,
+      "eyeOpenness": 0.08008936163117776,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22700,
+      "kind": "pressure",
+      "value": 1.3493093549498945
+    },
+    {
+      "t": 22800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1185530104879115,
+      "yaw": -0.00030212446329033553,
+      "eyeOpenness": 0.08019924959787936,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22800,
+      "kind": "pressure",
+      "value": 1.2696796349715227
+    },
+    {
+      "t": 22900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 22900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11842240342804916,
+      "yaw": -0.0003874183280959444,
+      "eyeOpenness": 0.08030668022269305,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 22900,
+      "kind": "pressure",
+      "value": 1.0438666317475171
+    },
+    {
+      "t": 23000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11830755919164966,
+      "yaw": -0.00046951259302917595,
+      "eyeOpenness": 0.0804103285655577,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 23000,
+      "kind": "pressure",
+      "value": 0.7942751616976403
+    },
+    {
+      "t": 23100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11820962526436063,
+      "yaw": -0.0005477292602242684,
+      "eyeOpenness": 0.08050891633323082,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23100,
+      "kind": "pressure",
+      "value": 0.6561994622449597
+    },
+    {
+      "t": 23200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11812958016961092,
+      "yaw": -0.0006214223560134191,
+      "eyeOpenness": 0.08060122764445736,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23200,
+      "kind": "pressure",
+      "value": 0.7044852260742945
+    },
+    {
+      "t": 23300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11806822369152785,
+      "yaw": -0.0006899832658764009,
+      "eyeOpenness": 0.08068612402541245,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23300,
+      "kind": "pressure",
+      "value": 0.9129585394922942
+    },
+    {
+      "t": 23400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11802616888375869,
+      "yaw": -0.0007528457608494781,
+      "eyeOpenness": 0.08076255845047961,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23400,
+      "kind": "pressure",
+      "value": 1.1686137859355887
+    },
+    {
+      "t": 23500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800383594404121,
+      "yaw": -0.000809490673881673,
+      "eyeOpenness": 0.0808295882551998,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23500,
+      "kind": "pressure",
+      "value": 1.3328697807033039
+    },
+    {
+      "t": 23600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800144801572673,
+      "yaw": -0.0008594501875173697,
+      "eyeOpenness": 0.08088638676213615,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23600,
+      "kind": "pressure",
+      "value": 1.3166894683631054
+    },
+    {
+      "t": 23700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11801902895820568,
+      "yaw": -0.0009023116974943022,
+      "eyeOpenness": 0.0809322534762726,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23700,
+      "kind": "pressure",
+      "value": 1.1288435934396492
+    },
+    {
+      "t": 23800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11805640310851227,
+      "yaw": -0.0009377212203483232,
+      "eyeOpenness": 0.080966622724207,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23800,
+      "kind": "pressure",
+      "value": 0.8711564065603714
+    },
+    {
+      "t": 23900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 23900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11811319703649088,
+      "yaw": -0.0009653863168823485,
+      "eyeOpenness": 0.08098907063059152,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 23900,
+      "kind": "pressure",
+      "value": 0.6833105316368957
+    },
+    {
+      "t": 24000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11818884327598675,
+      "yaw": -0.000985078507355178,
+      "eyeOpenness": 0.0809993203457801,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 24000,
+      "kind": "pressure",
+      "value": 0.6671302192966955
+    },
+    {
+      "t": 24100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11828258599478014,
+      "yaw": -0.0009966351584437226,
+      "eyeOpenness": 0.08099724546021035,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24100,
+      "kind": "pressure",
+      "value": 0.8313862140644006
+    },
+    {
+      "t": 24200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11839348854661208,
+      "yaw": -0.0009999608263946372,
+      "eyeOpenness": 0.08098287156341057,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24200,
+      "kind": "pressure",
+      "value": 1.087041460507694
+    },
+    {
+      "t": 24300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11852044282984421,
+      "yaw": -0.0009950280452725759,
+      "eyeOpenness": 0.0809563759284045,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24300,
+      "kind": "pressure",
+      "value": 1.2955147739257042
+    },
+    {
+      "t": 24400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11866218035924395,
+      "yaw": -0.0009818775537951056,
+      "eyeOpenness": 0.08091808532540622,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24400,
+      "kind": "pressure",
+      "value": 1.3438005377550426
+    },
+    {
+      "t": 24500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11881728494026975,
+      "yaw": -0.0009606179588809027,
+      "eyeOpenness": 0.08086847199176855,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24500,
+      "kind": "pressure",
+      "value": 1.2057248383023695
+    },
+    {
+      "t": 24600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11898420681921876,
+      "yaw": -0.000931424838689908,
+      "eyeOpenness": 0.08080814780788799,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24600,
+      "kind": "pressure",
+      "value": 0.9561333682524852
+    },
+    {
+      "t": 24700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11916127816785353,
+      "yaw": -0.0008945392925632301,
+      "eyeOpenness": 0.08073785675089411,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24700,
+      "kind": "pressure",
+      "value": 0.7303203650284789
+    },
+    {
+      "t": 24800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11934672974779055,
+      "yaw": -0.0008502659498385128,
+      "eyeOpenness": 0.08065846571919241,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24800,
+      "kind": "pressure",
+      "value": 0.6506906450501047
+    },
+    {
+      "t": 24900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 24900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1195387085881452,
+      "yaw": -0.0007989704539855151,
+      "eyeOpenness": 0.08057095384102106,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 24900,
+      "kind": "pressure",
+      "value": 0.7604085129249581
+    },
+    {
+      "t": 25000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11973529649980445,
+      "yaw": -0.0007410764428398316,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 25000,
+      "kind": "pressure",
+      "value": 1.0000000000000024
+    },
+    {
+      "t": 25100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11993452924133831,
+      "yaw": -0.0006770620498743514,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25100,
+      "kind": "pressure",
+      "value": 1.239591487075038
+    },
+    {
+      "t": 25200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12013441614505095,
+      "yaw": -0.0006074559554036284,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25200,
+      "kind": "pressure",
+      "value": 1.3493093549498942
+    },
+    {
+      "t": 25300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12033296000707432,
+      "yaw": -0.0005328330203333975,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25300,
+      "kind": "pressure",
+      "value": 1.2696796349715245
+    },
+    {
+      "t": 25400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12052817704276894,
+      "yaw": -0.0004538095385150619,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25400,
+      "kind": "pressure",
+      "value": 1.04386663174751
+    },
+    {
+      "t": 25500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12071811670804433,
+      "yaw": -0.00037103814691492697,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25500,
+      "kind": "pressure",
+      "value": 0.7942751616976426
+    },
+    {
+      "t": 25600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12090088118855077,
+      "yaw": -0.0002852024356339172,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25600,
+      "kind": "pressure",
+      "value": 0.6561994622449603
+    },
+    {
+      "t": 25700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12107464436201294,
+      "yaw": -0.00019701130229236174,
+      "eyeOpenness": 0.016,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 25700,
+      "kind": "pressure",
+      "value": 0.7044852260742931
+    },
+    {
+      "t": 25800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12123767004424008,
+      "yaw": -0.00010719309740576567,
+      "eyeOpenness": 0.0796176550079158,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 25800,
+      "kind": "pressure",
+      "value": 0.9129585394923011
+    },
+    {
+      "t": 25900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 25900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12138832933650448,
+      "yaw": -0.00001648960910352283,
+      "eyeOpenness": 0.07951755500785132,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 25900,
+      "kind": "pressure",
+      "value": 1.1686137859355863
+    },
+    {
+      "t": 26000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1215251169009592,
+      "yaw": 0.0000743500631305468,
+      "eyeOpenness": 0.07942340499363591,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 26000,
+      "kind": "pressure",
+      "value": 1.332869780703303
+    },
+    {
+      "t": 26100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12164666600147615,
+      "yaw": 0.0001645756951005093,
+      "eyeOpenness": 0.07933636611578704,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26100,
+      "kind": "pressure",
+      "value": 1.3166894683631065
+    },
+    {
+      "t": 26200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12175176215962177,
+      "yaw": 0.00025344213382933503,
+      "eyeOpenness": 0.07925751182329875,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26200,
+      "kind": "pressure",
+      "value": 1.1288435934396426
+    },
+    {
+      "t": 26300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12183935528932403,
+      "yaw": 0.0003402154516078942,
+      "eyeOpenness": 0.07918781462481368,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26300,
+      "kind": "pressure",
+      "value": 0.8711564065603647
+    },
+    {
+      "t": 26400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12190857018898539,
+      "yaw": 0.000424179007336997,
+      "eyeOpenness": 0.07912813409469045,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26400,
+      "kind": "pressure",
+      "value": 0.6833105316368969
+    },
+    {
+      "t": 26500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12195871528620783,
+      "yaw": 0.0005046393651032873,
+      "eyeOpenness": 0.07907920627188787,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26500,
+      "kind": "pressure",
+      "value": 0.6671302192966946
+    },
+    {
+      "t": 26600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12198928954775567,
+      "yaw": 0.0005809320211087522,
+      "eyeOpenness": 0.07904163458240898,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26600,
+      "kind": "pressure",
+      "value": 0.8313862140643982
+    },
+    {
+      "t": 26700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199998748571404,
+      "yaw": 0.0006524268916564725,
+      "eyeOpenness": 0.07901588239725849,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26700,
+      "kind": "pressure",
+      "value": 1.0870414605076912
+    },
+    {
+      "t": 26800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199070220982311,
+      "yaw": 0.0007185335168686116,
+      "eyeOpenness": 0.07900226731769605,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26800,
+      "kind": "pressure",
+      "value": 1.295514773925708
+    },
+    {
+      "t": 26900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 26900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1219615264954903,
+      "yaw": 0.0007787059371602635,
+      "eyeOpenness": 0.0790009572582654,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 26900,
+      "kind": "pressure",
+      "value": 1.343800537755043
+    },
+    {
+      "t": 27000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.121912751856809,
+      "yaw": 0.0008324472021955175,
+      "eyeOpenness": 0.07901196837590714,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 27000,
+      "kind": "pressure",
+      "value": 1.2057248383023718
+    },
+    {
+      "t": 27100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12184486563384617,
+      "yaw": 0.0008793134750872674,
+      "eyeOpenness": 0.07903516487069542,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27100,
+      "kind": "pressure",
+      "value": 0.9561333682524977
+    },
+    {
+      "t": 27200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12175854612330145,
+      "yaw": 0.0009189176979451458,
+      "eyeOpenness": 0.07907026066065617,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27200,
+      "kind": "pressure",
+      "value": 0.7303203650284743
+    },
+    {
+      "t": 27300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12165465580119075,
+      "yaw": 0.0009509327884986141,
+      "eyeOpenness": 0.07911682291001115,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27300,
+      "kind": "pressure",
+      "value": 0.6506906450501044
+    },
+    {
+      "t": 27400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12153423270527106,
+      "yaw": 0.0009750943413950598,
+      "eyeOpenness": 0.07917427736733426,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27400,
+      "kind": "pressure",
+      "value": 0.7604085129249489
+    },
+    {
+      "t": 27500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1213984800633102,
+      "yaw": 0.0009912028118634736,
+      "eyeOpenness": 0.07924191544778454,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27500,
+      "kind": "pressure",
+      "value": 0.9999999999999997
+    },
+    {
+      "t": 27600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12124875427083277,
+      "yaw": 0.0009991251637093423,
+      "eyeOpenness": 0.07931890297207086,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27600,
+      "kind": "pressure",
+      "value": 1.2395914870750433
+    },
+    {
+      "t": 27700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1210865513384645,
+      "yaw": 0.0009987959680303224,
+      "eyeOpenness": 0.07940429045437103,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27700,
+      "kind": "pressure",
+      "value": 1.3493093549498942
+    },
+    {
+      "t": 27800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12091349194428838,
+      "yaw": 0.0009902179435786673,
+      "eyeOpenness": 0.07949702481232403,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27800,
+      "kind": "pressure",
+      "value": 1.2696796349715325
+    },
+    {
+      "t": 27900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 27900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12073130524056523,
+      "yaw": 0.0009734619343076713,
+      "eyeOpenness": 0.07959596235467693,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 27900,
+      "kind": "pressure",
+      "value": 1.0438666317475127
+    },
+    {
+      "t": 28000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12054181157661574,
+      "yaw": 0.0009486663242875679,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 28000,
+      "kind": "pressure",
+      "value": 0.7942751616976367
+    },
+    {
+      "t": 28100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12034690431049178,
+      "yaw": 0.0009160358948229621,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28100,
+      "kind": "pressure",
+      "value": 0.6561994622449588
+    },
+    {
+      "t": 28200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12014853089116871,
+      "yaw": 0.0008758401332106084,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28200,
+      "kind": "pressure",
+      "value": 0.7044852260742915
+    },
+    {
+      "t": 28300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11994867340027887,
+      "yaw": 0.0008284110071051006,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28300,
+      "kind": "pressure",
+      "value": 0.9129585394922985
+    },
+    {
+      "t": 28400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11974932874780714,
+      "yaw": 0.0007741402228735074,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28400,
+      "kind": "pressure",
+      "value": 1.1686137859355925
+    },
+    {
+      "t": 28500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1195524887196264,
+      "yaw": 0.0007134759905815575,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28500,
+      "kind": "pressure",
+      "value": 1.332869780703302
+    },
+    {
+      "t": 28600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1193601200762316,
+      "yaw": 0.0006469193223286404,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28600,
+      "kind": "pressure",
+      "value": 1.3166894683631034
+    },
+    {
+      "t": 28700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11917414490151891,
+      "yaw": 0.0005750198945027931,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28700,
+      "kind": "pressure",
+      "value": 1.128843593439645
+    },
+    {
+      "t": 28800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11899642139795885,
+      "yaw": 0.0004983715081284155,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28800,
+      "kind": "pressure",
+      "value": 0.8711564065603673
+    },
+    {
+      "t": 28900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 28900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1188287253200514,
+      "yaw": 0.0004176071847986503,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 28900,
+      "kind": "pressure",
+      "value": 0.6833105316368938
+    },
+    {
+      "t": 29000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11867273223157405,
+      "yaw": 0.000333393938693977,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 29000,
+      "kind": "pressure",
+      "value": 0.6671302192966968
+    },
+    {
+      "t": 29100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11853000076390244,
+      "yaw": 0.0002464272678637871,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29100,
+      "kind": "pressure",
+      "value": 0.8313862140643957
+    },
+    {
+      "t": 29200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11840195704268076,
+      "yaw": 0.00015742541026614478,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29200,
+      "kind": "pressure",
+      "value": 1.0870414605076886
+    },
+    {
+      "t": 29300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11828988043844585,
+      "yaw": 0.00006712341200383335,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29300,
+      "kind": "pressure",
+      "value": 1.2955147739257065
+    },
+    {
+      "t": 29400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11819489078357963,
+      "yaw": -0.000023732943254278263,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29400,
+      "kind": "pressure",
+      "value": 1.3438005377550417
+    },
+    {
+      "t": 29500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11811793718331409,
+      "yaw": -0.00011439329353095082,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29500,
+      "kind": "pressure",
+      "value": 1.205724838302374
+    },
+    {
+      "t": 29600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11805978853258563,
+      "yaw": -0.00020410889560951845,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29600,
+      "kind": "pressure",
+      "value": 0.9561333682525005
+    },
+    {
+      "t": 29700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11802102583349093,
+      "yaw": -0.0002921388087338362,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29700,
+      "kind": "pressure",
+      "value": 0.730320365028476
+    },
+    {
+      "t": 29800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800203639010609,
+      "yaw": -0.0003777560138695152,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29800,
+      "kind": "pressure",
+      "value": 0.650690645050105
+    },
+    {
+      "t": 29900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 29900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800300993867237,
+      "yaw": -0.0004602534179887918,
+      "eyeOpenness": 0.012,
+      "blinking": true,
+      "talking": false
+    },
+    {
+      "t": 29900,
+      "kind": "pressure",
+      "value": 0.7604085129249469
+    },
+    {
+      "t": 30000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11802393675181427,
+      "yaw": -0.000538949693791041,
+      "eyeOpenness": 0.08094052957662877,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 30000,
+      "kind": "pressure",
+      "value": 0.999999999999987
+    },
+    {
+      "t": 30100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11806460773573238,
+      "yaw": -0.0006131949066300373,
+      "eyeOpenness": 0.08089706167033038,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30100,
+      "kind": "pressure",
+      "value": 1.2395914870750413
+    },
+    {
+      "t": 30200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11812461651939943,
+      "yaw": -0.0006823758821763881,
+      "eyeOpenness": 0.08084253031777162,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30200,
+      "kind": "pressure",
+      "value": 1.3493093549498947
+    },
+    {
+      "t": 30300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11820336351488529,
+      "yaw": -0.0007459212704848902,
+      "eyeOpenness": 0.08077760805319235,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30300,
+      "kind": "pressure",
+      "value": 1.2696796349715278
+    },
+    {
+      "t": 30400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11830006190824134,
+      "yaw": -0.0008033062646437917,
+      "eyeOpenness": 0.08070309556177288,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30400,
+      "kind": "pressure",
+      "value": 1.0438666317475156
+    },
+    {
+      "t": 30500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11841374552108543,
+      "yaw": -0.0008540569350357491,
+      "eyeOpenness": 0.08061991180479738,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30500,
+      "kind": "pressure",
+      "value": 0.7942751616976389
+    },
+    {
+      "t": 30600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11854327846433681,
+      "yaw": -0.0008977541434147547,
+      "eyeOpenness": 0.08052908268612002,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30600,
+      "kind": "pressure",
+      "value": 0.6561994622449594
+    },
+    {
+      "t": 30700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11868736648764441,
+      "yaw": -0.000934037004473602,
+      "eyeOpenness": 0.08043172839971031,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30700,
+      "kind": "pressure",
+      "value": 0.7044852260742849
+    },
+    {
+      "t": 30800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11884456991110853,
+      "yaw": -0.0009626058663135666,
+      "eyeOpenness": 0.08032904961431994,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30800,
+      "kind": "pressure",
+      "value": 0.9129585394922959
+    },
+    {
+      "t": 30900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 30900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11901331801008644,
+      "yaw": -0.000983224785201305,
+      "eyeOpenness": 0.0802223126656556,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 30900,
+      "kind": "pressure",
+      "value": 1.16861378593559
+    },
+    {
+      "t": 31000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11919192470935387,
+      "yaw": -0.0009957234741744894,
+      "eyeOpenness": 0.08011283393868233,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 31000,
+      "kind": "pressure",
+      "value": 1.3328697807033012
+    },
+    {
+      "t": 31100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11937860542981125,
+      "yaw": -0.000999998709403105,
+      "eyeOpenness": 0.08000196363267026,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31100,
+      "kind": "pressure",
+      "value": 1.3166894683631087
+    },
+    {
+      "t": 31200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11957149491940822,
+      "yaw": -0.0009960151826915926,
+      "eyeOpenness": 0.07989106910921,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31200,
+      "kind": "pressure",
+      "value": 1.1288435934396477
+    },
+    {
+      "t": 31300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11976866589012553,
+      "yaw": -0.0009838057930812041,
+      "eyeOpenness": 0.07978151802856553,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31300,
+      "kind": "pressure",
+      "value": 0.8711564065603699
+    },
+    {
+      "t": 31400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11996814827479979,
+      "yaw": -0.0009634713751443019,
+      "eyeOpenness": 0.0796746614823436,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31400,
+      "kind": "pressure",
+      "value": 0.6833105316368993
+    },
+    {
+      "t": 31500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1201679489113835,
+      "yaw": -0.0009351798662145588,
+      "eyeOpenness": 0.07957181733050385,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31500,
+      "kind": "pressure",
+      "value": 0.667130219296696
+    },
+    {
+      "t": 31600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12036607145796117,
+      "yaw": -0.0008991649194307042,
+      "eyeOpenness": 0.07947425394821458,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31600,
+      "kind": "pressure",
+      "value": 0.831386214064402
+    },
+    {
+      "t": 31700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12056053633953803,
+      "yaw": -0.0008557239740483863,
+      "eyeOpenness": 0.07938317458300342,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31700,
+      "kind": "pressure",
+      "value": 1.087041460507686
+    },
+    {
+      "t": 31800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12074940052729892,
+      "yaw": -0.0008052157989569957,
+      "eyeOpenness": 0.07929970251512607,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31800,
+      "kind": "pressure",
+      "value": 1.2955147739256998
+    },
+    {
+      "t": 31900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 31900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1209307769527099,
+      "yaw": -0.0007480575296890004,
+      "eyeOpenness": 0.07922486720417013,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 31900,
+      "kind": "pressure",
+      "value": 1.3438005377550422
+    },
+    {
+      "t": 32000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0006847212233924279,
+      "eyeOpenness": 0.0791595915927476,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 32000,
+      "kind": "pressure",
+      "value": 1.2057248383023682
+    },
+    {
+      "t": 32100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0006157299602182316,
+      "eyeOpenness": 0.07910468072385941,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32100,
+      "kind": "pressure",
+      "value": 0.9561333682525032
+    },
+    {
+      "t": 32200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0005416535233202818,
+      "eyeOpenness": 0.07906081181231381,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32200,
+      "kind": "pressure",
+      "value": 0.7303203650284777
+    },
+    {
+      "t": 32300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0004631036931458505,
+      "eyeOpenness": 0.07902852589264767,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32300,
+      "kind": "pressure",
+      "value": 0.6506906450501042
+    },
+    {
+      "t": 32400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.00038072919488002895,
+      "eyeOpenness": 0.07900822114655688,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32400,
+      "kind": "pressure",
+      "value": 0.7604085129249523
+    },
+    {
+      "t": 32500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0002952103407719373,
+      "eyeOpenness": 0.07900014799212823,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32500,
+      "kind": "pressure",
+      "value": 0.9999999999999842
+    },
+    {
+      "t": 32600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.0002072534115905774,
+      "eyeOpenness": 0.0790044059954374,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32600,
+      "kind": "pressure",
+      "value": 1.2395914870750393
+    },
+    {
+      "t": 32700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.00011758482361255002,
+      "eyeOpenness": 0.0790209426426023,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32700,
+      "kind": "pressure",
+      "value": 1.3493093549498951
+    },
+    {
+      "t": 32800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": -0.000026945129315227855,
+      "eyeOpenness": 0.07904955398743586,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32800,
+      "kind": "pressure",
+      "value": 1.269679634971536
+    },
+    {
+      "t": 32900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 32900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.00006391709867775959,
+      "eyeOpenness": 0.07908988716671086,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 32900,
+      "kind": "pressure",
+      "value": 1.0438666317475083
+    },
+    {
+      "t": 33000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.00015425144988758405,
+      "eyeOpenness": 0.07914144475201611,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 33000,
+      "kind": "pressure",
+      "value": 0.7942751616976411
+    },
+    {
+      "t": 33100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0002433118734497403,
+      "eyeOpenness": 0.07920359088453252,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33100,
+      "kind": "pressure",
+      "value": 0.6561994622449598
+    },
+    {
+      "t": 33200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.00033036283957847245,
+      "eyeOpenness": 0.07927555911706909,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33200,
+      "kind": "pressure",
+      "value": 0.704485226074294
+    },
+    {
+      "t": 33300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0004146854141400042,
+      "eyeOpenness": 0.079356461866643,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33300,
+      "kind": "pressure",
+      "value": 0.9129585394922932
+    },
+    {
+      "t": 33400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0004955831961660837,
+      "eyeOpenness": 0.0794453013610254,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33400,
+      "kind": "pressure",
+      "value": 1.1686137859355878
+    },
+    {
+      "t": 33500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0005723880692712042,
+      "eyeOpenness": 0.07954098194424924,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33500,
+      "kind": "pressure",
+      "value": 1.3328697807033003
+    },
+    {
+      "t": 33600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0006444657194739078,
+      "eyeOpenness": 0.07964232358931565,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33600,
+      "kind": "pressure",
+      "value": 1.3166894683631098
+    },
+    {
+      "t": 33700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0007112208738517036,
+      "eyeOpenness": 0.07974807645144671,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33700,
+      "kind": "pressure",
+      "value": 1.1288435934396317
+    },
+    {
+      "t": 33800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0007721022167647858,
+      "eyeOpenness": 0.07985693628239979,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33800,
+      "kind": "pressure",
+      "value": 0.8711564065603816
+    },
+    {
+      "t": 33900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 33900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0008266069430465208,
+      "eyeOpenness": 0.0799675605157388,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 33900,
+      "kind": "pressure",
+      "value": 0.6833105316369004
+    },
+    {
+      "t": 34000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0008742849105569856,
+      "eyeOpenness": 0.08007858482468323,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 34000,
+      "kind": "pressure",
+      "value": 0.6671302192966982
+    },
+    {
+      "t": 34100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009147423578045313,
+      "eyeOpenness": 0.0801886399483269,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34100,
+      "kind": "pressure",
+      "value": 0.8313862140643996
+    },
+    {
+      "t": 34200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009476451559324113,
+      "eyeOpenness": 0.08029636857870939,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34200,
+      "kind": "pressure",
+      "value": 1.0870414605076928
+    },
+    {
+      "t": 34300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009727215682130216,
+      "eyeOpenness": 0.08040044210047198,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34300,
+      "kind": "pressure",
+      "value": 1.2955147739256982
+    },
+    {
+      "t": 34400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009897644942597392,
+      "eyeOpenness": 0.08049957697664811,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34400,
+      "kind": "pressure",
+      "value": 1.3438005377550408
+    },
+    {
+      "t": 34500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009986331804219257,
+      "eyeOpenness": 0.08059255057850291,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34500,
+      "kind": "pressure",
+      "value": 1.2057248383023704
+    },
+    {
+      "t": 34600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.000999254382237317,
+      "eyeOpenness": 0.08067821626419248,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34600,
+      "kind": "pressure",
+      "value": 0.9561333682525059
+    },
+    {
+      "t": 34700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009916229693413814,
+      "eyeOpenness": 0.08075551752027821,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34700,
+      "kind": "pressure",
+      "value": 0.7303203650284732
+    },
+    {
+      "t": 34800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.000975801967837835,
+      "eyeOpenness": 0.0808235009916889,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34800,
+      "kind": "pressure",
+      "value": 0.6506906450501047
+    },
+    {
+      "t": 34900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 34900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.2,
+      "yaw": 0.0009519220397803819,
+      "eyeOpenness": 0.08088132823943267,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 34900,
+      "kind": "pressure",
+      "value": 0.7604085129249502
+    },
+    {
+      "t": 35000,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35000,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 35000,
+      "kind": "pressure",
+      "value": 0.9999999999999815
+    },
+    {
+      "t": 35100,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35100,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35100,
+      "kind": "pressure",
+      "value": 1.2395914870750373
+    },
+    {
+      "t": 35200,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35200,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35200,
+      "kind": "pressure",
+      "value": 1.3493093549498956
+    },
+    {
+      "t": 35300,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35300,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35300,
+      "kind": "pressure",
+      "value": 1.2696796349715378
+    },
+    {
+      "t": 35400,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35400,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35400,
+      "kind": "pressure",
+      "value": 1.043866631747531
+    },
+    {
+      "t": 35500,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35500,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35500,
+      "kind": "pressure",
+      "value": 0.7942751616976435
+    },
+    {
+      "t": 35600,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35600,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35600,
+      "kind": "pressure",
+      "value": 0.6561994622449585
+    },
+    {
+      "t": 35700,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35700,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35700,
+      "kind": "pressure",
+      "value": 0.7044852260742924
+    },
+    {
+      "t": 35800,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35800,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35800,
+      "kind": "pressure",
+      "value": 0.9129585394922906
+    },
+    {
+      "t": 35900,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 35900,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 35900,
+      "kind": "pressure",
+      "value": 1.1686137859355854
+    },
+    {
+      "t": 36000,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36000,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 36000,
+      "kind": "pressure",
+      "value": 1.3328697807033025
+    },
+    {
+      "t": 36100,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36100,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36100,
+      "kind": "pressure",
+      "value": 1.3166894683631112
+    },
+    {
+      "t": 36200,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36200,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36200,
+      "kind": "pressure",
+      "value": 1.1288435934396344
+    },
+    {
+      "t": 36300,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36300,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36300,
+      "kind": "pressure",
+      "value": 0.8711564065603843
+    },
+    {
+      "t": 36400,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36400,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36400,
+      "kind": "pressure",
+      "value": 0.6833105316368973
+    },
+    {
+      "t": 36500,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36500,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36500,
+      "kind": "pressure",
+      "value": 0.6671302192966913
+    },
+    {
+      "t": 36600,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36600,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36600,
+      "kind": "pressure",
+      "value": 0.8313862140643973
+    },
+    {
+      "t": 36700,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36700,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36700,
+      "kind": "pressure",
+      "value": 1.0870414605077094
+    },
+    {
+      "t": 36800,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36800,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36800,
+      "kind": "pressure",
+      "value": 1.2955147739256967
+    },
+    {
+      "t": 36900,
+      "kind": "validation",
+      "code": 1
+    },
+    {
+      "t": 36900,
+      "kind": "features",
+      "faceFound": false,
+      "pitch": null,
+      "yaw": null,
+      "eyeOpenness": null,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 36900,
+      "kind": "pressure",
+      "value": 1.3438005377550415
+    },
+    {
+      "t": 37000,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.118712923733286,
+      "yaw": -0.0006049003924338027,
+      "eyeOpenness": 0.07973287670220505,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 37000,
+      "kind": "pressure",
+      "value": 1.2057248383023726
+    },
+    {
+      "t": 37100,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11887218155349948,
+      "yaw": -0.000674693867375668,
+      "eyeOpenness": 0.07962767050028464,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37100,
+      "kind": "pressure",
+      "value": 0.956133368252489
+    },
+    {
+      "t": 37200,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11904270816282317,
+      "yaw": -0.0007389151990930222,
+      "eyeOpenness": 0.07952705623172567,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37200,
+      "kind": "pressure",
+      "value": 0.730320365028475
+    },
+    {
+      "t": 37300,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11922279971574531,
+      "yaw": -0.0007970339982112105,
+      "eyeOpenness": 0.07943227477058398,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37300,
+      "kind": "pressure",
+      "value": 0.6506906450501044
+    },
+    {
+      "t": 37400,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11941065679699948,
+      "yaw": -0.0008485702747846052,
+      "eyeOpenness": 0.0793444950550012,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37400,
+      "kind": "pressure",
+      "value": 0.7604085129249483
+    },
+    {
+      "t": 37500,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11960440240072708,
+      "yaw": -0.0008930984024243891,
+      "eyeOpenness": 0.07926479967071051,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37500,
+      "kind": "pressure",
+      "value": 0.9999999999999987
+    },
+    {
+      "t": 37600,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11980210068489941,
+      "yaw": -0.0009302506334501288,
+      "eyeOpenness": 0.07919417149952536,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37600,
+      "kind": "pressure",
+      "value": 1.2395914870750353
+    },
+    {
+      "t": 37700,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12000177631361143,
+      "yaw": -0.000959720136034248,
+      "eyeOpenness": 0.0791334815974748,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37700,
+      "kind": "pressure",
+      "value": 1.3493093549498953
+    },
+    {
+      "t": 37800,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12020143419398499,
+      "yaw": -0.0009812635282562987,
+      "eyeOpenness": 0.07908347845208437,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37800,
+      "kind": "pressure",
+      "value": 1.2696796349715394
+    },
+    {
+      "t": 37900,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 37900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12039907941047757,
+      "yaw": -0.0009947028881389106,
+      "eyeOpenness": 0.07904477875129222,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 37900,
+      "kind": "pressure",
+      "value": 1.0438666317475138
+    },
+    {
+      "t": 38000,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12059273715741876,
+      "yaw": -0.0009999272230649405,
+      "eyeOpenness": 0.07901785977784732,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 38000,
+      "kind": "pressure",
+      "value": 0.7942751616976457
+    },
+    {
+      "t": 38100,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1207804724706159,
+      "yaw": -0.0009968933864402533,
+      "eyeOpenness": 0.07900305352298946,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38100,
+      "kind": "pressure",
+      "value": 0.6561994622449591
+    },
+    {
+      "t": 38200,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12096040956087652,
+      "yaw": -0.0009856264340316336,
+      "eyeOpenness": 0.07900054259200694,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38200,
+      "kind": "pressure",
+      "value": 0.7044852260742911
+    },
+    {
+      "t": 38300,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12113075055627404,
+      "yaw": -0.0009662194170369068,
+      "eyeOpenness": 0.07901035795216867,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38300,
+      "kind": "pressure",
+      "value": 0.9129585394922879
+    },
+    {
+      "t": 38400,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12128979346588974,
+      "yaw": -0.000938832613596257,
+      "eyeOpenness": 0.0790323785508054,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38400,
+      "kind": "pressure",
+      "value": 1.1686137859356003
+    },
+    {
+      "t": 38500,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12143594918554329,
+      "yaw": -0.0009036922050915067,
+      "eyeOpenness": 0.07906633280825023,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38500,
+      "kind": "pressure",
+      "value": 1.3328697807033016
+    },
+    {
+      "t": 38600,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12156775737559658,
+      "yaw": -0.0008610884081655299,
+      "eyeOpenness": 0.07911180196722595,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38600,
+      "kind": "pressure",
+      "value": 1.3166894683631123
+    },
+    {
+      "t": 38700,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1216839010521846,
+      "yaw": -0.0008113730778889909,
+      "eyeOpenness": 0.0791682252573714,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38700,
+      "kind": "pressure",
+      "value": 1.1288435934396368
+    },
+    {
+      "t": 38800,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12178321974608287,
+      "yaw": -0.000754956801869314,
+      "eyeOpenness": 0.07923490681121284,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38800,
+      "kind": "pressure",
+      "value": 0.8711564065603683
+    },
+    {
+      "t": 38900,
+      "kind": "validation",
+      "code": 2
+    },
+    {
+      "t": 38900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12186472109773237,
+      "yaw": -0.0006923055093010246,
+      "eyeOpenness": 0.07931102424628547,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 38900,
+      "kind": "pressure",
+      "value": 0.6833105316368985
+    },
+    {
+      "t": 39000,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12192759077256816,
+      "yaw": -0.0006239366229624752,
+      "eyeOpenness": 0.07939563880756251,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 39000,
+      "kind": "pressure",
+      "value": 0.6671302192966904
+    },
+    {
+      "t": 39100,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12197120059758126,
+      "yaw": -0.0005504147859387637,
+      "eyeOpenness": 0.07948770694510472,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39100,
+      "kind": "pressure",
+      "value": 0.8313862140643948
+    },
+    {
+      "t": 39200,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199511483781561,
+      "yaw": -0.00047234719836293195,
+      "eyeOpenness": 0.07958609318414413,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39200,
+      "kind": "pressure",
+      "value": 1.0870414605077068
+    },
+    {
+      "t": 39300,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12199909455008778,
+      "yaw": -0.00039037860268809906,
+      "eyeOpenness": 0.07968958412887486,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39300,
+      "kind": "pressure",
+      "value": 1.2955147739256954
+    },
+    {
+      "t": 39400,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12198309997042828,
+      "yaw": -0.00030518595890619867,
+      "eyeOpenness": 0.07979690342724298,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39400,
+      "kind": "pressure",
+      "value": 1.3438005377550457
+    },
+    {
+      "t": 39500,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12194729091138995,
+      "yaw": -0.00021747285368932935,
+      "eyeOpenness": 0.07990672751217447,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39500,
+      "kind": "pressure",
+      "value": 1.2057248383023749
+    },
+    {
+      "t": 39600,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12189202516525381,
+      "yaw": -0.00012796368962740467,
+      "eyeOpenness": 0.08001770192510542,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39600,
+      "kind": "pressure",
+      "value": 0.9561333682524916
+    },
+    {
+      "t": 39700,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12181785492908682,
+      "yaw": -0.00003739770255193429,
+      "eyeOpenness": 0.08012845802049635,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39700,
+      "kind": "pressure",
+      "value": 0.7303203650284766
+    },
+    {
+      "t": 39800,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12172552128737135,
+      "yaw": 0.00005347714364462579,
+      "eyeOpenness": 0.08023762984531428,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39800,
+      "kind": "pressure",
+      "value": 0.6506906450501042
+    },
+    {
+      "t": 39900,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 39900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12161594680733397,
+      "yaw": 0.00014391033427259465,
+      "eyeOpenness": 0.08034387098530815,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 39900,
+      "kind": "pressure",
+      "value": 0.7604085129249463
+    },
+    {
+      "t": 40000,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1214902263209587,
+      "yaw": 0.00023315500217517806,
+      "eyeOpenness": 0.08044587117031277,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 40000,
+      "kind": "pressure",
+      "value": 0.9999999999999959
+    },
+    {
+      "t": 40100,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12134961598578772,
+      "yaw": 0.0003204740959344998,
+      "eyeOpenness": 0.0805423724337884,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40100,
+      "kind": "pressure",
+      "value": 1.2395914870750333
+    },
+    {
+      "t": 40200,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1211955207338105,
+      "yaw": 0.00040514646701167537,
+      "eyeOpenness": 0.08063218462730064,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40200,
+      "kind": "pressure",
+      "value": 1.3493093549498951
+    },
+    {
+      "t": 40300,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12102948023384767,
+      "yaw": 0.00048647282554855774,
+      "eyeOpenness": 0.0807142000986007,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40300,
+      "kind": "pressure",
+      "value": 1.2696796349715411
+    },
+    {
+      "t": 40400,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12085315350768915,
+      "yaw": 0.0005637815156437089,
+      "eyeOpenness": 0.08078740735228167,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40400,
+      "kind": "pressure",
+      "value": 1.0438666317475165
+    },
+    {
+      "t": 40500,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12066830235369684,
+      "yaw": 0.0006364340624057098,
+      "eyeOpenness": 0.08085090352453413,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40500,
+      "kind": "pressure",
+      "value": 0.7942751616976479
+    },
+    {
+      "t": 40600,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12047677374349779,
+      "yaw": 0.0007038304449721186,
+      "eyeOpenness": 0.08090390551815003,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40600,
+      "kind": "pressure",
+      "value": 0.6561994622449596
+    },
+    {
+      "t": 40700,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12028048136765414,
+      "yaw": 0.0007654140519453434,
+      "eyeOpenness": 0.08094575966044731,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40700,
+      "kind": "pressure",
+      "value": 0.7044852260743002
+    },
+    {
+      "t": 40800,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.12008138651469973,
+      "yaw": 0.000820676278319568,
+      "eyeOpenness": 0.08097594976500377,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40800,
+      "kind": "pressure",
+      "value": 0.9129585394922852
+    },
+    {
+      "t": 40900,
+      "kind": "validation",
+      "code": 5
+    },
+    {
+      "t": 40900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11988147847459323,
+      "yaw": 0.000869160725933857,
+      "eyeOpenness": 0.08099410349777551,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 40900,
+      "kind": "pressure",
+      "value": 1.168613785935598
+    },
+    {
+      "t": 41000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11968275466239058,
+      "yaw": 0.0009104669727607893,
+      "eyeOpenness": 0.08099999696908626,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 41000,
+      "kind": "pressure",
+      "value": 1.3328697807033008
+    },
+    {
+      "t": 41100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11948720066073396,
+      "yaw": 0.0009442538799009041,
+      "eyeOpenness": 0.080993557494855,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41100,
+      "kind": "pressure",
+      "value": 1.316689468363105
+    },
+    {
+      "t": 41200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11929677038056637,
+      "yaw": 0.0009702424089713106,
+      "eyeOpenness": 0.08097486449300745,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41200,
+      "kind": "pressure",
+      "value": 1.1288435934396208
+    },
+    {
+      "t": 41300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11911336653829935,
+      "yaw": 0.0009882179266202406,
+      "eyeOpenness": 0.08094414850401616,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41300,
+      "kind": "pressure",
+      "value": 0.8711564065603894
+    },
+    {
+      "t": 41400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11893882164449959,
+      "yaw": 0.000998031977135082,
+      "eyeOpenness": 0.08090178834764881,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41400,
+      "kind": "pressure",
+      "value": 0.6833105316368997
+    },
+    {
+      "t": 41500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11877487969404905,
+      "yaw": 0.0009996035085043603,
+      "eyeOpenness": 0.08084830645099045,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41500,
+      "kind": "pressure",
+      "value": 0.6671302192966957
+    },
+    {
+      "t": 41600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11862317874072466,
+      "yaw": 0.0009929195418078636,
+      "eyeOpenness": 0.08078436240535923,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41600,
+      "kind": "pressure",
+      "value": 0.8313862140643924
+    },
+    {
+      "t": 41700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11848523453030634,
+      "yaw": 0.0009780352784065985,
+      "eyeOpenness": 0.08071074483157788,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41700,
+      "kind": "pressure",
+      "value": 1.0870414605077041
+    },
+    {
+      "t": 41800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11836242535574631,
+      "yaw": 0.000955073644047295,
+      "eyeOpenness": 0.08062836165392662,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41800,
+      "kind": "pressure",
+      "value": 1.2955147739257047
+    },
+    {
+      "t": 41900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 41900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11825597828572144,
+      "yaw": 0.0009242242736466259,
+      "eyeOpenness": 0.0805382289027285,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 41900,
+      "kind": "pressure",
+      "value": 1.3438005377550426
+    },
+    {
+      "t": 42000,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42000,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11816695690416873,
+      "yaw": 0.0008857419451395526,
+      "eyeOpenness": 0.08044145818366481,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42000,
+      "kind": "pulse",
+      "bpm": 72,
+      "confidence": 0.95,
+      "stable": true
+    },
+    {
+      "t": 42000,
+      "kind": "pressure",
+      "value": 1.205724838302361
+    },
+    {
+      "t": 42000,
+      "kind": "error",
+      "code": 4,
+      "message": "Presage credits exhausted",
+      "retryable": false
+    },
+    {
+      "t": 42100,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42100,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11809625068330606,
+      "yaw": 0.0008399444753262838,
+      "eyeOpenness": 0.08033924296836109,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42100,
+      "kind": "pressure",
+      "value": 0.956133368252514
+    },
+    {
+      "t": 42200,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42200,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11804456609631996,
+      "yaw": 0.0007872100950956139,
+      "eyeOpenness": 0.0802328438753221,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42200,
+      "kind": "pressure",
+      "value": 0.7303203650284784
+    },
+    {
+      "t": 42300,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42300,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1180124195585189,
+      "yaw": 0.0007279743257020158,
+      "eyeOpenness": 0.08012357312274522,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42300,
+      "kind": "pressure",
+      "value": 0.6506906450501041
+    },
+    {
+      "t": 42400,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42400,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11800013226748239,
+      "yaw": 0.0006627263818946207,
+      "eyeOpenness": 0.08001277834495588,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42400,
+      "kind": "pressure",
+      "value": 0.7604085129249442
+    },
+    {
+      "t": 42500,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42500,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.1180078269937608,
+      "yaw": 0.0005920051316038888,
+      "eyeOpenness": 0.07990182597205643,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42500,
+      "kind": "pressure",
+      "value": 0.9999999999999931
+    },
+    {
+      "t": 42600,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42600,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11803542685419273,
+      "yaw": 0.0005163946455538681,
+      "eyeOpenness": 0.079792084377767,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42600,
+      "kind": "pressure",
+      "value": 1.2395914870750457
+    },
+    {
+      "t": 42700,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42700,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11808265608009601,
+      "yaw": 0.0004365193735549413,
+      "eyeOpenness": 0.07968490700329584,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42700,
+      "kind": "pressure",
+      "value": 1.3493093549498951
+    },
+    {
+      "t": 42800,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42800,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11814904277265734,
+      "yaw": 0.00035303898731482757,
+      "eyeOpenness": 0.07958161566537193,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42800,
+      "kind": "pressure",
+      "value": 1.2696796349715302
+    },
+    {
+      "t": 42900,
+      "kind": "validation",
+      "code": 0
+    },
+    {
+      "t": 42900,
+      "kind": "features",
+      "faceFound": true,
+      "pitch": 0.11823392361798916,
+      "yaw": 0.00026664293235993723,
+      "eyeOpenness": 0.07948348425430192,
+      "blinking": false,
+      "talking": false
+    },
+    {
+      "t": 42900,
+      "kind": "pressure",
+      "value": 1.0438666317474996
+    }
+  ]
+}
