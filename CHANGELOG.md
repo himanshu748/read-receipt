@@ -2,6 +2,14 @@
 
 Delivery log per task. Newest first.
 
+## D — Review panel (subagent)
+
+- `createReviewPanel`: ViewColumn.Beside, start on show, stop after 2s hide
+- Webview: preview / REPLAY card, pulse badge + waveform, eyes-on light, calibration,
+  unread list, privacy line; nonce CSP
+- Extra bridge messages: webview `ready`, host `clearFrame` (accepted)
+- 36 jsdom tests (all phases + pause reasons)
+
 ## B — Core (subagent)
 
 - `@rr/core`: `parseUnifiedDiff`, `readDiff`, `hunkId`, thresholds, `accumulate`,
