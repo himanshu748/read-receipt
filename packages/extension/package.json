@@ -1,0 +1,82 @@
+{
+  "name": "@rr/extension",
+  "version": "0.1.0",
+  "private": true,
+  "displayName": "Read Receipt",
+  "description": "Blue ticks for AI-written code — eyes-on time via Presage SmartSpectra",
+  "publisher": "read-receipt",
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=20"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "readReceipt.openPanel",
+        "title": "Read Receipt: Open Review Panel"
+      },
+      {
+        "command": "readReceipt.nextUnread",
+        "title": "Read Receipt: Next Unread Hunk"
+      },
+      {
+        "command": "readReceipt.recalibrate",
+        "title": "Read Receipt: Recalibrate"
+      },
+      {
+        "command": "readReceipt.setApiKey",
+        "title": "Read Receipt: Set Presage API Key"
+      },
+      {
+        "command": "readReceipt.installHooks",
+        "title": "Read Receipt: Install Git Hooks"
+      },
+      {
+        "command": "readReceipt.resetReceipts",
+        "title": "Read Receipt: Reset Receipts"
+      }
+    ],
+    "configuration": {
+      "title": "Read Receipt",
+      "properties": {
+        "readReceipt.nodePath": {
+          "type": "string",
+          "default": "node",
+          "description": "Path to a system Node.js ≥ 20 binary used to run the Presage helper."
+        },
+        "readReceipt.helper.mode": {
+          "type": "string",
+          "enum": ["live", "replay"],
+          "default": "replay",
+          "description": "Helper source. Use replay while developing or when credits are exhausted."
+        },
+        "readReceipt.helper.replayFile": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a recording JSON used in replay mode."
+        },
+        "readReceipt.helper.attach": {
+          "type": "boolean",
+          "default": false,
+          "description": "Attach to an already-running helper instead of spawning one."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@rr/core": "0.1.0",
+    "@rr/protocol": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}

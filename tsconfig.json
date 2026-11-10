@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/protocol" },
+    { "path": "packages/core" },
+    { "path": "packages/helper" },
+    { "path": "packages/hooks" },
+    { "path": "packages/extension" }
+  ]
+}

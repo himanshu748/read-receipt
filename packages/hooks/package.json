@@ -1,0 +1,25 @@
+{
+  "name": "@rr/hooks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "rr-hook": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@rr/core": "0.1.0",
+    "@rr/protocol": "0.1.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "read-receipt",
+  "private": true,
+  "version": "0.1.0",
+  "description": "WhatsApp-style blue ticks for AI-written code — eyes-on time via Presage SmartSpectra",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @rr/protocol && npm run build -w @rr/core && npm run build -w @rr/helper && npm run build -w @rr/hooks && npm run build -w @rr/extension",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "typecheck": "tsc -b",
+    "check:wording": "node scripts/check-wording.mjs",
+    "ci": "npm run typecheck && npm run lint && npm run check:wording && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

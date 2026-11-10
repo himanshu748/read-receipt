@@ -1,0 +1,8 @@
+{
+  "minSeconds": 3,
+  "secondsPerLine": 0.4,
+  "minLineSeconds": 0.4,
+  "closureMs": 1000,
+  "calibrationSec": 20,
+  "lookDownThreshold": 1.8
+}
