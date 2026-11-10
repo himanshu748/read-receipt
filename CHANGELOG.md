@@ -2,6 +2,13 @@
 
 Delivery log per task. Newest first.
 
+## A1 — Helper replay (subagent)
+
+- `@rr/helper`: features, eyesOn state machine, replay source, WS server (token + Origin reject),
+  recorder, CLI `rr-helper`, `fixtures/replay/demo-session.json`
+- 32 helper tests; full suite 106/106 green
+- Pre-S0 tunables: pulse confidence floor 0.3, pressure SD ε 0.05; optional `--speed`
+
 ## D — Review panel (subagent)
 
 - `createReviewPanel`: ViewColumn.Beside, start on show, stop after 2s hide
