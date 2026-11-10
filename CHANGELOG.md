@@ -2,6 +2,14 @@
 
 Delivery log per task. Newest first.
 
+## B — Core (subagent)
+
+- `@rr/core`: `parseUnifiedDiff`, `readDiff`, `hunkId`, thresholds, `accumulate`,
+  `statusOf`, `unionEyesOnSec`, `loadConfig`, `ReceiptStore` (atomic write + corrupt bak)
+- 34 unit tests (parser/hash/accumulate/diff/config/store)
+- Accepted drift: `ReceiptStore.open(repoRoot, { now? })` for GC tests; on-disk `lastSeen`
+  map for 14-day GC; `accumulate` preserves `readAt` but does not set it (callers use `statusOf`)
+
 ## F — Docs (subagent)
 
 - `README.md`: product pitch, architecture, platforms, install, extension/helper/hooks
