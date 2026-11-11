@@ -13,6 +13,7 @@ export interface CliArgs {
   token: string;
   speed: number;
   camera?: string;
+  parentPid?: number;
 }
 
 export function parseArgs(argv: string[]): CliArgs {
@@ -56,6 +57,9 @@ export function parseArgs(argv: string[]): CliArgs {
       case '--camera':
         out.camera = next();
         break;
+      case '--parent-pid':
+        out.parentPid = Number(next());
+        break;
       case '--help':
       case '-h':
         printHelp();
@@ -84,6 +88,9 @@ export function parseArgs(argv: string[]): CliArgs {
   }
   if (!Number.isFinite(out.speed) || out.speed <= 0) {
     throw new Error('--speed must be > 0');
+  }
+  if (out.parentPid !== undefined && (!Number.isInteger(out.parentPid) || out.parentPid < 1)) {
+    throw new Error('--parent-pid must be a positive integer');
   }
 
   return out;
@@ -139,6 +146,14 @@ async function main(): Promise<void> {
   };
   process.on('SIGINT', () => void shutdown());
   process.on('SIGTERM', () => void shutdown());
+  // An editor crash must not leave its owned helper running after its parent dies.
+  if (args.parentPid !== undefined) {
+    const timer = setInterval(() => {
+      try { process.kill(args.parentPid!, 0); }
+      catch { clearInterval(timer); void shutdown(); }
+    }, 1000);
+    timer.unref();
+  }
 }
 
 const isDirect =

@@ -64,7 +64,7 @@ describe('isHelperToClient', () => {
     expect(
       isHelperToClient({
         type: 'error',
-        reason: 'attention-lost',
+        reason: 'unknown-pause-reason',
         message: 'no',
         retryable: true,
       }),

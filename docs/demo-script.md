@@ -1,65 +1,104 @@
-# Demo script (≈ 2 minutes)
+# Replay demo walkthrough
 
-For hackathon judges. Uses the demo repo (6 hunks across 4 files) with a planted
-fake key in `auth.js`. Prefer **replay** mode so credits are not spent.
+Allow roughly two to three minutes after setup. Say that the input is **synthetic
+replay**, keeping **REPLAY — camera off** visible. This shows a working code-review
+workflow, not measured human viewing or a live Presage SDK.
 
-## Prep (before the clock)
+## Prepare
 
-1. `npm install && npm run build`
-2. Generate / open the demo repo (`scripts/make-demo-repo.mjs` once Task E lands).
-3. `npx rr-hook install` in that demo repo.
-4. Launch the extension (F5) with `readReceipt.helper.mode` = `replay` and the
-   demo replay file set.
-5. Confirm status bar shows something like `0/6 read` and gutters are grey ✓.
+From the source checkout:
 
-## Minute 0:00–0:20 — Show the unread state
+```sh
+npm ci
+npm run build
+npm run demo:repo
+```
 
-1. Open the demo repo in the Extension Development Host.
-2. Point at the **six grey ticks** in the gutter (unread / partial hunks).
-3. Status bar: `$(check-all) 0/6 read` (or low count).
+The generator creates `fixtures/demo/_repo` with a synthetic baseline and six
+unstaged hunks: two in `app.js`, two in `storage.js`, one in `README.md`, and a
+19-line fake-key block at `auth.js:40–58`. Existing targets are refused; use
+`npm run demo:repo -- /absolute/path/to/a/new-directory` for another copy.
 
-## Minute 0:20–0:50 — Review Panel + replay
+Open the source checkout in VS Code or Cursor. Press F5, selecting **Read Receipt:
+Replay Extension**. Trust the disposable folder in the new Extension Development
+Host, then run **Read Receipt: Install Git Hooks**. This generated demo has no
+foreign hooks for installation to replace.
 
-1. Command: **Read Receipt: Open Review Panel** (opens beside the editor).
-2. Panel shows **REPLAY — camera off**, eyes-on light, and the unread list.
-3. Start / let replay run. Calibration segment plays first (nothing counts yet).
+## 1. Block an unread commit
 
-## Minute 0:50–1:20 — Ticks go blue
+In the demo repository's terminal:
 
-1. Scroll each hunk into view while replay reports eyes-on (or use
-   **Next Unread Hunk**).
-2. Watch gutters flip grey ✓ → blue ✓✓ as thresholds are met.
-3. Status bar climbs toward `6/6 read`.
+```sh
+git add -A
+git commit -m "Synthetic replay review"
+```
 
-Leave the planted key unread on purpose for the next beat.
+It fails with `Read Receipt: unread staged changes` and lists the six unread
+hunks. No review commit is created yet.
 
-## Minute 1:20–1:45 — Commit blocked
+## 2. Start replay
 
-1. Stage everything: `git add -A`.
-2. `git commit -m "demo"` — **blocked**.
-3. Hook output lists unread hunks; include **`auth.js` around lines 40–58** where
-   the planted key lives:
+Run **Read Receipt: Open Review Panel**. It opens beside the editor and starts
+the bundled recording. Nothing counts during approximately 20 seconds of
+calibration. The waveform/pulse number come from the fixture, not a real person.
 
-   ```js
-   const API_KEY = "sk_live_DEMO_…";
-   ```
+The default recording lasts five minutes, leaving time to review without the
+interruptions in the separate scenario fixture. If it finishes, use Stop and
+Start or **Read Receipt: Reconnect Helper** to restart.
 
-## Minute 1:45–2:00 — Read the key hunk, commit passes
+## 3. Complete five receipts
 
-1. Jump to that hunk (panel unread list or **Next Unread Hunk**).
-2. Keep it on screen while you were looking until it earns ✓✓.
-3. `git commit -m "demo"` again — **passes**.
-4. Show the trailer:
+Open `app.js`, `storage.js` and `README.md` manually, keeping both changed blocks
+in each code file visible until their ticks turn blue. Leave `auth.js` closed.
+The editor window must be active, the document saved and the panel visible.
 
-   ```
-   Read-Receipt: 6/6 hunks, … eyes-on, replay viewer
-   ```
+The default hunk threshold is the larger of three seconds or 0.4 seconds per
+changed line; every line independently needs 0.4 seconds. The status bar should
+reach `5/6 read`. Allow roughly a second for persistence, then retry the commit:
+it should still fail and list `auth.js:40`.
 
-## Talking points (keep short)
+To show pausing, switch applications or hide the panel. The remaining receipt
+does not progress. Show the editor/panel again to continue; restarting replay
+also restarts calibration.
 
-- Blue ticks mean eyes-on time with the lines on screen while you were looking —
-  not a claim about code correctness.
-- Video stays on this computer; replay stores derived features only
-  ([consent](consent.md)).
-- Live mode needs a Presage key and a supported native platform; Intel Mac /
-  Windows ARM stay on replay.
+## 4. Review the last block and commit
+
+Use the unread list or **Next Unread Hunk** to open `auth.js:40–58`. Show the
+deliberately fake value:
+
+```js
+const API_KEY = "sk_live_DEMO_NOT_A_REAL_CREDENTIAL";
+```
+
+Keep all 19 lines visible until the hunk turns blue, at least 7.6 seconds under
+the defaults. Wait for persistence, then retry:
+
+```sh
+git commit -m "Synthetic replay review"
+git log -1 --format=%B
+```
+
+The commit succeeds with a trailer such as:
+
+```text
+Read-Receipt: 6/6 hunks, ... eyes-on, replay viewer
+```
+
+Show the actual timing. An override/bypass is not a completed replay review.
+
+## 5. Invalidate a receipt
+
+Change/save the fake-key block, stage it and attempt another commit. New content
+has a new hunk identity and blocks until reviewed again. Moving identical content
+to another line does not by itself erase its receipt.
+
+## Automated checks
+
+```sh
+npm run test:replay
+npm run test:editor
+```
+
+The first uses the real helper and Git hooks with **simulated editor visibility**
+in a temporary repo. The second launches a separate editor-host test and disposable
+profile. Both use synthetic input; neither proves live SDK behavior or human review.

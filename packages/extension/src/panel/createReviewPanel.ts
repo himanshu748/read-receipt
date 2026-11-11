@@ -138,6 +138,7 @@ export const createReviewPanel: CreateReviewPanel = (ctx, helper, receipts) => {
         post({ type: 'state', state });
       }),
       helper.onPhase((p) => {
+        if (p.phase === 'stopped' || p.phase === 'error' || p.phase === 'idle') running = false;
         post(phaseMessage(p.phase, p.calibrationProgress, p.message));
       }),
       helper.onPreviewFrame((jpeg) => {

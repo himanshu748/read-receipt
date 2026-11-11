@@ -3,6 +3,7 @@ import { isRecording, type RecordedSample, type Recording } from '@rr/protocol';
 
 export type ReplayEvent =
   | { type: 'sample'; sample: RecordedSample }
+  | { type: 'looped' }
   | { type: 'ended' };
 
 export interface ReplaySourceOptions {
@@ -69,7 +70,7 @@ export class ReplaySource {
   start(): void {
     if (this.playing) return;
     this.playing = true;
-    this.wallStart = this.now() - this.pausedElapsed;
+    this.wallStart = this.now() - this.pausedElapsed / this.speed;
     this.arm();
   }
 
@@ -101,10 +102,12 @@ export class ReplaySource {
   private arm(): void {
     if (!this.playing) return;
     if (this.index >= this.recording.samples.length) {
-      if (this.loop) {
+      if (this.loop && this.recording.samples.length > 0) {
         this.index = 0;
         this.wallStart = this.now();
         this.pausedElapsed = 0;
+        // Consumers must reset calibration and liveness before timestamps rewind.
+        this.emit({ type: 'looped' });
         this.arm();
         return;
       }

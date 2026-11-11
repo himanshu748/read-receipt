@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Read Receipt: Replay Extension",
+    "type": "extensionHost",
+    "request": "launch",
+    "runtimeExecutable": "${execPath}",
+    "args": ["--extensionDevelopmentPath=${workspaceFolder}/packages/extension", "${workspaceFolder}/fixtures/demo/_repo"],
+    "outFiles": ["${workspaceFolder}/packages/extension/out/**/*.js"],
+    "preLaunchTask": "Read Receipt: build"
+  }]
+}

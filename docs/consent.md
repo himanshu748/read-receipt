@@ -1,55 +1,60 @@
-# Consent & Data Handling
+# Consent and data handling
 
-Read Receipt is a **personal self-review aid**. It reports what the local tool saw —
-eyes-on time per hunk — and stamps that into a commit trailer. It is not
-tamper-proof attestation.
+Read Receipt is a local self-review aid. The current version uses **synthetic
+replay input**. Its timings describe the fixture and editor visibility state,
+not observations of a person's eyes, pulse or review decisions.
 
-## Camera & preview
+## Current camera/provider behavior
 
-- The camera runs **only while the Review Panel is visible**. Hide or close the panel
-  for more than ~2 seconds and the helper stops the SDK and releases the camera.
-- The **camera preview is always on screen while the camera is running**. There is no
-  background camera operation.
-- The OS camera indicator stays honest: when the panel is hidden, the camera is off.
+- Replay never opens a camera or acquires video frames.
+- It does not install/construct the SmartSpectra SDK, authenticate a Presage key,
+  consume SDK credits or call provider analysis services.
+- Pulse numbers, waveforms and face-related pause reasons come from replay data.
+  `replay viewer` trailers must not be presented as live evidence.
+- Selecting live mode produces an explicit unsupported-mode error.
 
-## What is stored
+## Stored data
 
-| Data | Where | Notes |
+| Data | Location | Contents |
 | --- | --- | --- |
-| Per-hunk eyes-on seconds, per-line timings, timestamps | `.git/read-receipt/` | Local only; GC'd when hunks leave the diff for > 14 days |
-| Optional recordings | Path you pass to `--record` | **Derived features** (pitch, yaw, eye-openness, blink) and **pulse values** only — never frames, never raw landmarks |
-| Preview JPEGs | Memory only | Relayed helper → extension → panel, then dropped |
+| Receipts | Git directory, `read-receipt/receipts.json` | Hunk/file IDs, per-line/hunk seconds, timestamps, source and retention bookkeeping. |
+| Hook metadata | Git directory, `read-receipt/` | Staged-diff fingerprints, short-lived pre-commit markers and optional override metadata/reason. |
+| Optional recording | Explicit `--record` path | Replay-derived feature, pulse, validation and error samples; no video or raw landmark arrays. |
+| Helper token | Editor SecretStorage | Token supplied with Set Helper Token. |
+| Future Presage key | Editor SecretStorage | Stored by Set Presage API Key, unused in replay. |
 
-**No video is saved or sent** off this machine.
+Worktrees can place their Git directory elsewhere; storage resolves that directory
+rather than assuming a directory-shaped `.git`. Receipt entries are eligible for
+cleanup after they are no longer observed for 14 days. Corrupt-store recovery can
+leave a local `.bak` copy.
 
-## Network & telemetry
+Trailers become part of Git commit messages/history. They publish counts, elapsed
+time, source and override/bypass labels when those commits are published. Removed
+code is shown in read-only documents sourced from the Git baseline, locally.
 
-- The SmartSpectra SDK is constructed with `enableTelemetry: false`.
-- The backend is contacted **only to authenticate your Presage API key**.
-- We never call `requestInsight()` (no LLM Insights / off-device analysis).
-- The helper WebSocket binds `127.0.0.1` only, with a random token; browser `Origin`
-  headers are rejected.
+## Local transport/processes
 
-## Pulse
+The extension spawns system Node.js and uses an authenticated loopback WebSocket.
+The normal helper binds `127.0.0.1`, uses a random token and rejects browser
+`Origin` headers. Attachment requires an explicit loopback port/token. Tokens do
+not go to the webview; provider API keys are never command-line arguments.
 
-Pulse (bpm + waveform) is a **liveness signal** — it helps distinguish a live viewer
-from a still photo. It is **not** a medical measurement. Use of the Presage SDK is
-subject to Presage's wellness disclaimer.
+State older than 750 ms is unavailable. Dirty documents, an inactive editor
+window, a hidden panel or paused helper state also prevent counting. Use
+Start/Stop, Recalibrate, Reconnect Helper or Reset Receipts for local control.
+Closing the panel stops replay; hiding it stops counting immediately and schedules
+helper stop after about two seconds. Disconnecting does not terminate an externally
+started helper server.
 
-## Claims we make — and do not make
+## Limitations and future live work
 
-**Allowed**
+Receipts/metadata are locally editable; hooks can be bypassed, removed or disabled.
+This is not tamper-proof attestation or a server-side policy. The product does
+not establish attention, focus, comprehension, fatigue, stress, code correctness,
+medical status or resistance to photographs/replay attacks. Synthetic pulse data
+is not evidence of a live person. There are no manager or remote-monitoring features.
 
-- "eyes-on time"
-- "on screen while you were looking"
-
-**Banned claims** (we never say or imply these)
-
-- Attention, focus, comprehension, fatigue, or stress
-- Code correctness
-- Any diagnostic or clinical meaning for pulse or face signals
-- Team / manager views, remote monitoring, or a hidden / covert mode
-
-Receipts are editable under `.git/read-receipt/`. The trailer honestly reports what
-this tool recorded locally, including `overridden` or `unverified` when you bypass
-the check.
+The plan's future live adapter, visible preview, telemetry choices and network
+boundaries still require implementation and hardware validation. The standalone
+spike is separate from normal replay use and must not be run or cited as successful
+live integration without authorization and actual observed results.

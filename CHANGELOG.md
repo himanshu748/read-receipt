@@ -2,6 +2,26 @@
 
 Delivery log per task. Newest first.
 
+## C + E + M3 — Replay extension and Git enforcement
+
+- Implemented extension activation, helper spawn/attach and protocol checks,
+  750 ms state freshness, editor visibility tracking, gutter/status UI and commands.
+- Added read-only removed-text review documents and fail-closed pause handling.
+- Implemented staged-diff pre-commit checks, replay/override/bypass trailers,
+  diff-bound one-shot overrides and installation that preserves foreign hooks.
+- Added the six-hunk generator, F5 configuration, bundled runtime assets,
+  sustained synthetic input, helper/real-Git replay integration and an editor-host
+  test runner.
+- Replay integration passed blocked → five read/offscreen sixth blocked → six
+  read/actual commit allowed, with a replay trailer. Edited content blocks again;
+  inactive/hidden editor states do not earn receipts.
+- Updated setup, demonstration, privacy and troubleshooting docs. Live remains
+  unimplemented; no SDK installation, camera or provider credits are part of this
+  validation. Build, strict types, lint, wording and all 153 tests passed.
+- The real Cursor 3.29.15 editor-host test passed activation, panel, viewport,
+  blocked/passing replay commit and removed-file review checks in a disposable
+  profile. Editor test thresholds are shortened; normal thresholds are unchanged.
+
 ## A1 — Helper replay (subagent)
 
 - `@rr/helper`: features, eyesOn state machine, replay source, WS server (token + Origin reject),
@@ -44,9 +64,6 @@ Delivery log per task. Newest first.
 
 ## Pending
 
-- A1 Helper (replay) — wave 1
-- B Core — wave 1
-- D Review panel — wave 1
-- C Extension tracking — wave 2
-- E Hooks + demo — wave 2
 - A2 Live SDK — after S0
+- Live hardware/privacy validation, installable release validation, license choice,
+  actual demo and submission preparation.

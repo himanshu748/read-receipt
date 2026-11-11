@@ -33,7 +33,7 @@ export interface HunkReceipt {
   lineCount: number;
   /** Seconds with ≥1 hunk line visible AND eyesOn. */
   eyesOnSec: number;
-  /** Per-line eyes-on seconds; length equals range length. */
+  /** Per-line eyes-on seconds; deleted hunks cover every removed line, not the gutter anchor. */
   lineSec: number[];
   /** Sorted unique unix seconds that accrued eyes-on time (for union totals). */
   buckets: number[];

@@ -20,7 +20,9 @@ export function statusOf(
 ): ReceiptStatus {
   if (!receipt || receipt.eyesOnSec <= 0) return 'unseen';
   const threshold = thresholdSec(hunk.lineCount, cfg);
-  const rangeLen = hunk.range.end - hunk.range.start + 1;
+  // Deleted content is reviewed in a read-only removed-text document. Its
+  // new-side gutter anchor alone cannot establish coverage of the removed lines.
+  const rangeLen = hunk.kind === 'delete' ? hunk.removed.length : hunk.range.end - hunk.range.start + 1;
   const linesReady =
     receipt.lineSec.length >= rangeLen &&
     receipt.lineSec

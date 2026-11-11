@@ -1,5 +1,5 @@
 {
-  "name": "@rr/extension",
+  "name": "read-receipt-vscode",
   "version": "0.1.0",
   "private": true,
   "displayName": "Read Receipt",
@@ -9,7 +9,9 @@
     "vscode": "^1.85.0",
     "node": ">=20"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -39,6 +41,14 @@
       {
         "command": "readReceipt.resetReceipts",
         "title": "Read Receipt: Reset Receipts"
+      },
+      {
+        "command": "readReceipt.setHelperToken",
+        "title": "Read Receipt: Set Helper Token"
+      },
+      {
+        "command": "readReceipt.reconnectHelper",
+        "title": "Read Receipt: Reconnect Helper"
       }
     ],
     "configuration": {
@@ -47,11 +57,15 @@
         "readReceipt.nodePath": {
           "type": "string",
           "default": "node",
-          "description": "Path to a system Node.js ≥ 20 binary used to run the Presage helper."
+          "description": "Path to a system Node.js ≥ 20 binary used to run the Presage helper.",
+          "scope": "machine"
         },
         "readReceipt.helper.mode": {
           "type": "string",
-          "enum": ["live", "replay"],
+          "enum": [
+            "live",
+            "replay"
+          ],
           "default": "replay",
           "description": "Helper source. Use replay while developing or when credits are exhausted."
         },
@@ -64,22 +78,37 @@
           "type": "boolean",
           "default": false,
           "description": "Attach to an already-running helper instead of spawning one."
+        },
+        "readReceipt.helper.attachPort": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 65535,
+          "description": "Port of an existing localhost helper. Set its token with Read Receipt: Set Helper Token."
         }
       }
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && npm run build:webview",
+    "build": "tsc -p tsconfig.json && node ../../scripts/build-extension.mjs && npm run build:webview",
     "build:webview": "esbuild webview/main.ts --bundle --outfile=webview/dist/main.js --format=iife --platform=browser --target=es2022",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@rr/core": "0.1.0",
-    "@rr/protocol": "0.1.0"
+    "@rr/protocol": "0.1.0",
+    "ws": "^8.18.2"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
     "esbuild": "^0.25.1",
-    "jsdom": "^26.0.0"
+    "jsdom": "^26.0.0",
+    "@types/ws": "^8.18.2"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    },
+    "virtualWorkspaces": false
   }
 }

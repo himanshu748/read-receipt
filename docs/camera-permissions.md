@@ -1,47 +1,27 @@
-# Camera permissions
+# Camera status
 
-Live mode needs camera access for the Presage helper (a system Node process). The
-Review Panel never opens the camera itself — webviews cannot — so the OS attributes
-permission to the **parent editor** (VS Code or Cursor), or to Terminal if you start
-the helper yourself.
+**The current replay version needs no camera permission.** It does not install or
+call the native Presage SDK. Keep `readReceipt.helper.mode` set to `replay`;
+selecting `live` currently produces an unsupported-mode error.
 
-## macOS
+No camera setup is required for `npm run test:replay`, the editor-host test or the
+manual replay walkthrough. Changing OS camera settings cannot enable an
+unimplemented live adapter.
 
-1. Open **System Settings › Privacy & Security › Camera**.
-2. Enable **Code** and/or **Cursor** (whichever editor you use).
-3. If you ran the helper from Terminal, also enable **Terminal** (or your shell app).
-4. Quit and reopen the editor if the toggle was just flipped, then open the Review Panel.
+## Future live feasibility work
 
-## Windows
+`scripts/spike/probe.mjs` is a separate hardware experiment described in `PLAN.md`,
+outside normal activation and replay tests. It needs a separately installed SDK,
+a supported native runtime, a Presage key, camera access and usable credits. The
+current replay results do not establish a successful live run.
 
-1. Open **Settings › Privacy & security › Camera**.
-2. Turn on **Camera access**.
-3. Turn on **Let desktop apps access your camera**.
-4. Reopen VS Code / Cursor and open the Review Panel.
+Before running it, confirm the current SDK/platform requirements, obtain
+authorization for camera/credit use and review its output. The script currently
+writes derived diagnostics to `scripts/spike/s0-summary.json`. Keep credentials
+outside source, logs and command-line arguments.
 
-On Windows, prefer selecting a camera by ID (`--camera <id>`). Front/back enums can
-fail with `kInputUnavailable`.
+A future live adapter must document the permissions it actually requests and
+verify that stopping/hiding the panel releases the camera. Those are future
+requirements, not behavior already delivered here.
 
-## Child process doesn't get the camera
-
-macOS often grants the prompt to the parent app but the spawned Node child still
-cannot open the device. Workaround:
-
-1. Start the helper yourself in Terminal (so permission attaches to Terminal):
-
-   ```bash
-   export SMARTSPECTRA_API_KEY=...   # live mode only
-   npx rr-helper --mode live --port 0 --token <32-byte-hex>
-   ```
-
-2. In the editor, set **`readReceipt.helper.attach`** to `true` (or run
-   **Read Receipt: Open Review Panel** after configuring attach in settings).
-
-3. The extension connects to the already-running helper instead of spawning one.
-
-Replay mode needs no camera permission.
-
-## Still stuck?
-
-See [troubleshooting.md](troubleshooting.md) for `camera-unavailable` and related
-pause reasons.
+For current startup or localhost issues, see [troubleshooting](troubleshooting.md).

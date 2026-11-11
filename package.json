@@ -10,18 +10,22 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @rr/protocol && npm run build -w @rr/core && npm run build -w @rr/helper && npm run build -w @rr/hooks && npm run build -w @rr/extension",
+    "build": "npm run build -w @rr/protocol && npm run build -w @rr/core && npm run build -w @rr/helper && npm run build -w @rr/hooks && npm run build -w read-receipt-vscode && npm rebuild --ignore-scripts -w @rr/helper -w @rr/hooks",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
     "typecheck": "tsc -b",
     "check:wording": "node scripts/check-wording.mjs",
-    "ci": "npm run typecheck && npm run lint && npm run check:wording && npm test"
+    "ci": "npm run typecheck && npm run lint && npm run check:wording && npm test",
+    "test:replay": "npm run build && node scripts/replay-e2e.mjs",
+    "demo:repo": "node scripts/make-demo-repo.mjs",
+    "test:editor": "npm run build && node scripts/editor-e2e.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.22.0",
     "typescript": "^5.8.2",
     "vitest": "^3.0.8"

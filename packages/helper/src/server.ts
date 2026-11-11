@@ -9,8 +9,8 @@ import {
   type SourceKind,
 } from '@rr/protocol';
 import { HelperSession } from './session.js';
-import { ReplaySource } from './sources/replay.js';
-import { Recorder } from './recorder.js';
+import type { ReplaySource } from './sources/replay.js';
+import type { Recorder } from './recorder.js';
 import type { EyesOnConfig } from './eyesOn.js';
 
 export const HELPER_VERSION = '0.1.0';
@@ -59,10 +59,11 @@ export async function startHelperServer(
 ): Promise<HelperServer> {
   const host = opts.host ?? '127.0.0.1';
   const stateHz = opts.stateHz ?? 10;
-  const session = new HelperSession({
+  const newSession = () => new HelperSession({
     source: opts.source,
     ...(opts.cfg ? { cfg: opts.cfg } : {}),
   });
+  let session = newSession();
 
   const httpServer: HttpServer = createServer((_req, res) => {
     res.writeHead(404);
@@ -150,21 +151,41 @@ export async function startHelperServer(
     }
   };
 
+  const beginSession = (): void => {
+    stopStateLoop();
+    pressureBatch = [];
+    session = newSession();
+    session.start(0);
+    emitPhase();
+    // Clear the previous run immediately, before the first replay sample arrives.
+    broadcast({ type: 'state', state: session.viewerState() });
+    startStateLoop();
+  };
+
+  const stopSession = (): void => {
+    stopStateLoop();
+    flushPressure();
+    session.stop();
+    // EOF is a stop boundary, never a fresh heartbeat for the final positive sample.
+    broadcast({ type: 'state', state: session.viewerState() });
+    emitPhase();
+    void opts.recorder?.flush().catch(() => {
+      broadcast({ type: 'error', reason: 'sdk-error', message: 'Could not save the recording.', retryable: false });
+    });
+  };
+
   const handleClientMessage = (msg: ClientToHelper): void => {
     switch (msg.type) {
       case 'start': {
-        session.start(0);
-        emitPhase();
-        startStateLoop();
+        unsubReplay?.();
+        unsubReplay = null;
+        opts.replay?.reset();
+        beginSession();
         if (opts.replay) {
-          opts.replay.reset();
-          unsubReplay?.();
           unsubReplay = opts.replay.onEvent((ev) => {
             if (ev.type === 'sample') onSample(ev.sample);
-            if (ev.type === 'ended') {
-              flushPressure();
-              emitPhase();
-            }
+            if (ev.type === 'looped') beginSession();
+            if (ev.type === 'ended') stopSession();
           });
           opts.replay.start();
         }
@@ -172,11 +193,7 @@ export async function startHelperServer(
       }
       case 'stop': {
         opts.replay?.stop();
-        session.stop();
-        stopStateLoop();
-        flushPressure();
-        emitPhase();
-        void opts.recorder?.flush();
+        stopSession();
         break;
       }
       case 'recalibrate': {
