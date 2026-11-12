@@ -99,6 +99,7 @@ export const createReviewPanel: CreateReviewPanel = (ctx, helper, receipts) => {
 
   const startHelper = (): void => {
     clearHideTimer();
+    if (!visible || disposed) return;
     if (running) {
       helper.send({ type: 'preview', enabled: true, maxFps: PREVIEW_MAX_FPS });
       return;
@@ -129,7 +130,11 @@ export const createReviewPanel: CreateReviewPanel = (ctx, helper, receipts) => {
     visible = next;
     visibility.fire(visible);
     if (visible) startHelper();
-    else scheduleStop();
+    else {
+      helper.send({ type: 'preview', enabled: false, maxFps: 0 });
+      post({ type: 'clearFrame' });
+      scheduleStop();
+    }
   };
 
   const attachHelperListeners = (): void => {

@@ -52,6 +52,16 @@ describe('review panel message → DOM', () => {
     });
   });
 
+  it('labels live waiting and stopped preview without claiming replay', () => {
+    applyHostMessage(root, { type: 'state', state: baseState() }, msg => posted.push(msg));
+    expect(root.querySelector('#rr-replay')?.textContent).toContain('Live camera');
+    expect(root.querySelector('#rr-replay')?.textContent).not.toContain('REPLAY');
+    applyHostMessage(root, { type: 'frame', base64: 'fixture' }, msg => posted.push(msg));
+    applyHostMessage(root, { type: 'phase', phase: 'stopped' }, msg => posted.push(msg));
+    expect(root.querySelector('#rr-frame')?.getAttribute('src')).toBeNull();
+    expect(root.querySelector('#rr-replay')?.textContent).toBe('Live camera preview stopped');
+  });
+
   it('mounts privacy line, replay card, and controls; posts ready', () => {
     expect(root.textContent).toContain(PRIVACY_LINE);
     expect(root.querySelector('#rr-replay')?.textContent).toBe(REPLAY_CARD_TEXT);

@@ -3,7 +3,7 @@ import type { HostToWebview, WebviewToHost } from './messages.js';
 import { pauseReasonMessage } from './pauseCopy.js';
 
 export const PRIVACY_LINE =
-  'Video stays on this computer. Nothing is recorded.';
+  'Video stays on this computer and is not saved. Live mode sends derived vitals to Presage/LLM services.';
 
 export const REPLAY_CARD_TEXT = 'REPLAY — camera off';
 
@@ -118,6 +118,7 @@ function drawWaveform(canvas: HTMLCanvasElement, values: number[]): void {
 }
 
 function applyState(root: HTMLElement, state: ViewerState): void {
+  root.dataset['source'] = state.source;
   const light = root.querySelector('#rr-eyes-light');
   const label = root.querySelector('#rr-eyes-label');
   const pause = root.querySelector('#rr-pause');
@@ -142,6 +143,9 @@ function applyState(root: HTMLElement, state: ViewerState): void {
   // Replay source never shows a live camera feed in the panel.
   if (state.source === 'replay') {
     showReplayCard(root);
+  } else if (!root.querySelector('#rr-frame')?.getAttribute('src')) {
+    const card = root.querySelector('#rr-replay');
+    if (card) card.textContent = 'Live camera — waiting for preview';
   }
 }
 
@@ -180,6 +184,7 @@ function applyPhase(
 function showReplayCard(root: HTMLElement): void {
   const img = root.querySelector('#rr-frame');
   const card = root.querySelector('#rr-replay');
+  if (card) card.textContent = root.dataset['source'] === 'live' ? 'Live camera preview stopped' : REPLAY_CARD_TEXT;
   if (img instanceof HTMLImageElement) {
     img.removeAttribute('src');
     setHidden(img, true);
@@ -262,6 +267,7 @@ export function applyHostMessage(
       break;
     case 'phase':
       applyPhase(root, msg.phase, msg.calibrationProgress, msg.message);
+      if (msg.phase === 'stopped' || msg.phase === 'error') showReplayCard(root);
       break;
     case 'frame':
       applyFrame(root, msg.base64);

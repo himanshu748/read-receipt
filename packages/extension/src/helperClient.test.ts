@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -34,6 +34,41 @@ function state(): ViewerState {
     facingScreen: true, pulseBpm: 72, quality: 'good', eyesOn: true, pauseReasons: [] };
 }
 
+/** Owned child intentionally ignores Stop/TERM to exercise the parent's bound.
+ * It is a protocol fixture, never a native SDK or camera process. */
+async function hungLiveHelper(): Promise<{ client: HelperClient; pid: number }> {
+  const dir = await mkdtemp(join(tmpdir(), 'rr-live-watchdog-')); tempDirs.push(dir);
+  const report = join(dir, 'pid.json'); const helper = join(dir, 'fake-helper.cjs');
+  const liveState = { ...state(), source: 'live' };
+  await writeFile(helper, `const fs=require('node:fs');
+    const {WebSocketServer}=require(${JSON.stringify(resolve('node_modules/ws'))});
+    process.on('SIGTERM',()=>{});
+    const server=new WebSocketServer({host:'127.0.0.1',port:0});
+    server.on('listening',()=>{fs.writeFileSync(${JSON.stringify(report)},JSON.stringify({pid:process.pid}));
+      console.log(JSON.stringify({type:'listening',port:server.address().port}));});
+    server.on('connection',socket=>{
+      socket.send(JSON.stringify({type:'hello',protocol:1,helperVersion:'fixture',sdkVersion:'fixture',source:'live'}));
+      socket.on('message',raw=>{if(JSON.parse(String(raw)).type==='start'){
+        socket.send(JSON.stringify({type:'phase',phase:'running'}));
+        socket.send(JSON.stringify({type:'state',state:${JSON.stringify(liveState)}}));}});
+    });`);
+  const client = track(new HelperClient({ nodePath: process.execPath, helperPath: helper,
+    mode: 'live', liveConsent: true, apiKey: 'fixture-watchdog-key' }));
+  await client.connect();
+  const { pid } = JSON.parse(await readFile(report, 'utf8')) as { pid: number };
+  return { client, pid };
+}
+
+function processIsAlive(pid: number): boolean {
+  try { process.kill(pid, 0); return true; } catch { return false; }
+}
+
+function firstState(client: HelperClient): Promise<void> {
+  return new Promise((done) => {
+    const listener = client.onState(() => { listener.dispose(); done(); });
+  });
+}
+
 async function fakeServer(
   onControl: (socket: WebSocket, message: ClientToHelper) => void = () => {},
   hello: unknown = { type: 'hello', protocol: 1, helperVersion: 'test', sdkVersion: null, source: 'replay' },
@@ -56,6 +91,7 @@ async function fakeServer(
 }
 
 afterEach(async () => {
+  vi.useRealTimers();
   await Promise.all(clients.splice(0).map((client) => client.shutdown()));
   await Promise.all(servers.splice(0).map((server) => server.close()));
   await Promise.all(tempDirs.splice(0).map((dir) => rm(dir, { recursive: true, force: true })));
@@ -191,6 +227,18 @@ describe('HelperClient', () => {
     expect(() => new HelperClient({ mode: 'replay', attach: { port: 1234, token: 'abcd' } })).toThrow(/token/);
   });
 
+  it('requires consent and credentials for an owned live helper before spawning', () => {
+    expect(() => new HelperClient({ mode: 'live', helperPath: HELPER, apiKey: 'fixture-key' })).toThrow(/consent/);
+    expect(() => new HelperClient({ mode: 'live', helperPath: HELPER, liveConsent: true })).toThrow(/API key/);
+    expect(() => new HelperClient({ mode: 'live', helperPath: HELPER, liveConsent: true,
+      apiKey: 'fixture-key', camera: -1 })).toThrow(/Camera/);
+    expect(() => new HelperClient({ mode: 'live', helperPath: HELPER, liveConsent: true,
+      apiKey: 'fixture-key', camera: 0.5 })).toThrow(/Camera/);
+    expect(() => new HelperClient({ mode: 'live', attach: { port: 1234, token: TOKEN } })).toThrow(/attachment/);
+    expect(() => new HelperClient({ mode: 'live', liveConsent: true,
+      attach: { port: 1234, token: TOKEN } })).toThrow(/attachment/);
+  });
+
   it('reports a missing system Node executable without hanging', async () => {
     const client = track(new HelperClient({ mode: 'replay', helperPath: HELPER, replayFile: FIXTURE,
       nodePath: resolve('missing-read-receipt-node'), startupTimeoutMs: 1000 }));
@@ -204,15 +252,82 @@ describe('HelperClient', () => {
     const helper = join(dir, 'fake-helper.cjs');
     const key = 'fixture-client-api-key';
     await writeFile(helper, `const fs=require('node:fs'); fs.writeFileSync(${JSON.stringify(report)},JSON.stringify({argv:process.argv,key:process.env.SMARTSPECTRA_API_KEY})); process.stderr.write(process.env.SMARTSPECTRA_API_KEY+' '+process.argv[process.argv.indexOf('--token')+1]); process.exit(1);`);
-    const client = track(new HelperClient({ nodePath: process.execPath, helperPath: helper, mode: 'live', apiKey: key }));
+    const client = track(new HelperClient({ nodePath: process.execPath, helperPath: helper,
+      mode: 'live', apiKey: key, liveConsent: true, camera: 2, replayFile: FIXTURE, loop: true, speed: 20 }));
     const errors: string[] = []; client.onError((error) => errors.push(error.message));
     await expect(client.connect()).rejects.toThrow(/exited/);
     const recorded = JSON.parse(await readFile(report, 'utf8')) as { argv: string[]; key: string };
     expect(recorded.key).toBe(key);
     expect(recorded.argv).not.toContain(key);
+    expect(recorded.argv).toContain('--live-consent');
+    expect(recorded.argv).not.toContain('--replay');
+    expect(recorded.argv).not.toContain('--loop');
+    expect(recorded.argv).not.toContain('--speed');
+    expect(recorded.argv[recorded.argv.indexOf('--camera') + 1]).toBe('2');
+    expect(recorded.argv[recorded.argv.indexOf('--max-live-seconds') + 1]).toBe('90');
     const token = recorded.argv[recorded.argv.indexOf('--token') + 1]!;
     expect(errors.join(' ')).not.toContain(key);
     expect(errors.join(' ')).not.toContain(token);
+  });
+
+  it('does not pass a saved API key or live controls to a replay child', async () => {
+    const dir = await mkdtemp(join(tmpdir(), 'rr-replay-env-')); tempDirs.push(dir);
+    const report = join(dir, 'env.json'); const helper = join(dir, 'fake-helper.cjs');
+    await writeFile(helper, `require('node:fs').writeFileSync(${JSON.stringify(report)}, JSON.stringify({argv:process.argv,key:process.env.SMARTSPECTRA_API_KEY??null})); process.exit(1);`);
+    const client = track(new HelperClient({ nodePath: process.execPath, helperPath: helper, mode: 'replay',
+      replayFile: FIXTURE, apiKey: 'unused-fixture-key', liveConsent: true, camera: 2 }));
+    await expect(client.connect()).rejects.toThrow(/exited/);
+    const recorded = JSON.parse(await readFile(report, 'utf8')) as { argv: string[]; key: string | null };
+    expect(recorded.key).toBeNull();
+    expect(recorded.argv).not.toContain('--live-consent');
+    expect(recorded.argv).not.toContain('--camera');
+  });
+
+  it('independently kills an unresponsive live child at the 90-second deadline', async () => {
+    const { client, pid } = await hungLiveHelper();
+    const phases: string[] = []; client.onPhase((event) => phases.push(event.message ?? event.phase));
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
+    const viewed = firstState(client); client.send({ type: 'start' }); await viewed;
+    expect(client.state?.eyesOn).toBe(true);
+    await vi.advanceTimersByTimeAsync(89_999);
+    expect(client.connected).toBe(true);
+    await vi.advanceTimersByTimeAsync(1);
+    expect(client.state).toBeNull();
+    expect(client.phase).toBe('stopped');
+    expect(client.connected).toBe(false);
+    expect(phases.some((message) => message.includes('90-second'))).toBe(true);
+    vi.useRealTimers();
+    await waitFor(() => !processIsAlive(pid));
+  });
+
+  it('kills a live child within three seconds of Stop even if Stop is repeated', async () => {
+    const { client, pid } = await hungLiveHelper();
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
+    const viewed = firstState(client); client.send({ type: 'start' }); await viewed;
+    client.send({ type: 'stop' });
+    expect(client.state).toBeNull();
+    await vi.advanceTimersByTimeAsync(2000);
+    expect(processIsAlive(pid)).toBe(true);
+    client.send({ type: 'stop' });
+    await vi.advanceTimersByTimeAsync(1000);
+    expect(client.phase).toBe('stopped');
+    expect(client.connected).toBe(false);
+    vi.useRealTimers();
+    await waitFor(() => !processIsAlive(pid));
+  });
+
+  it('does not restart a stopped live child or reset its lifetime budget', async () => {
+    const { client, pid } = await hungLiveHelper();
+    const errors: string[] = []; client.onError((event) => errors.push(event.message));
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] });
+    const viewed = firstState(client); client.send({ type: 'start' }); await viewed;
+    client.send({ type: 'stop' }); client.send({ type: 'start' });
+    expect(client.connected).toBe(false);
+    expect(client.phase).toBe('error');
+    expect(errors).toContain('A live helper can start only once. Reconnect for a new consented session.');
+    await vi.advanceTimersByTimeAsync(1000);
+    vi.useRealTimers();
+    await waitFor(() => !processIsAlive(pid));
   });
 
   it('emits preview and pulse data only after the protocol hello', async () => {

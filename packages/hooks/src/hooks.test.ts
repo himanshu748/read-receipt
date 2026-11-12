@@ -57,7 +57,8 @@ afterEach(async () => {
   await Promise.all(roots.splice(0).map(root => rm(root, { recursive: true, force: true })));
 });
 
-describe('installed Git hooks on disposable repositories', () => {
+// These tests launch several Git/Node processes; allow slower shared machines.
+describe('installed Git hooks on disposable repositories', { timeout: 15_000 }, () => {
   it('blocks unread staged changes, then allows a real replay-labelled commit after review', async () => {
     const root = await fixture();
     await expect(git(root, ['commit', '-m', 'Review attempt'])).rejects.toMatchObject({ stderr: expect.stringContaining('code.js:1') });

@@ -13,7 +13,7 @@ await bundle('packages/extension/src/extension.ts', resolve(extension, 'out/exte
 await bundle('packages/extension/src/tracker.ts', resolve(extension, 'out/tracker.cjs'));
 await bundle('packages/extension/src/helperClient.ts', resolve(extension, 'out/helperClient.cjs'));
 // The helper and hooks run on system Node, independently of the editor's module loader.
-await bundle('packages/helper/src/main.ts', resolve(extension, 'runtime/helper/main.js'));
+await bundle('packages/helper/src/main.ts', resolve(extension, 'runtime/helper/main.js'), ['@smartspectra/node-sdk']);
 await bundle('packages/hooks/src/cli.ts', resolve(extension, 'runtime/hooks/cli.js'), [], 'esm');
 await writeFile(resolve(extension, 'runtime/hooks/package.json'), '{"type":"module"}\n');
 await mkdir(resolve(extension, 'runtime/replay'), { recursive: true });

@@ -2,6 +2,28 @@
 
 Delivery log per task. Newest first.
 
+## A2 — Live camera integration
+
+- Added a native SmartSpectra 3.5.0 adapter and kept native dependencies external
+  to the helper bundle. Replay does not initialize the SDK.
+- Wired live-mode SecretStorage credentials, machine-level camera selection and
+  explicit per-session data/credit disclosure before helper creation.
+- Added local landmark reduction, live pulse/waveform input and in-memory preview
+  over the authenticated loopback connection; no video recording.
+- Bounded editor live sessions to 90 seconds; standalone CLI defaults to 90 with
+  a maximum of 300. Stop/close and panel hiding govern camera lifetime.
+- Added an independent parent-process deadline and a three-second Stop kill
+  fallback for hung native code; rejected live attachment and reuse of a stopped
+  live connection.
+- Disabled aggregate SDK telemetry and documented automatic derived-vitals
+  transmission to Presage/LLM services separately from raw-frame processing.
+- Live hardware success requires its own observed end-to-end result; historical
+  replay checks below are not live evidence.
+- The first native attempt exposed premature shutdown on the SDK's initial Idle
+  event. Fixed startup lifecycle handling and added a regression test; a repeat
+  physical run and the new editor-host test remain pending. See
+  [live validation](docs/live-validation.md).
+
 ## C + E + M3 — Replay extension and Git enforcement
 
 - Implemented extension activation, helper spawn/attach and protocol checks,
@@ -15,9 +37,9 @@ Delivery log per task. Newest first.
 - Replay integration passed blocked → five read/offscreen sixth blocked → six
   read/actual commit allowed, with a replay trailer. Edited content blocks again;
   inactive/hidden editor states do not earn receipts.
-- Updated setup, demonstration, privacy and troubleshooting docs. Live remains
-  unimplemented; no SDK installation, camera or provider credits are part of this
-  validation. Build, strict types, lint, wording and all 153 tests passed.
+- Updated setup, demonstration, privacy and troubleshooting docs. At this
+  checkpoint live was unimplemented; no SDK installation, camera or provider credits were part of this
+  historical validation. Build, strict types, lint, wording and all 153 tests passed.
 - The real Cursor 3.29.15 editor-host test passed activation, panel, viewport,
   blocked/passing replay commit and removed-file review checks in a disposable
   profile. Editor test thresholds are shortened; normal thresholds are unchanged.
@@ -64,6 +86,5 @@ Delivery log per task. Newest first.
 
 ## Pending
 
-- A2 Live SDK — after S0
 - Live hardware/privacy validation, installable release validation, license choice,
   actual demo and submission preparation.

@@ -4,7 +4,7 @@ import { unlink } from 'node:fs/promises';
 import { isAbsolute, relative, resolve, sep } from 'node:path';
 import { promisify } from 'node:util';
 import { loadConfig, readDiff, ReceiptStore } from '@rr/core';
-import type { HunkId } from '@rr/protocol';
+import type { HelperPhase, HunkId, PauseReason, ViewerState } from '@rr/protocol';
 import { HelperClient, type HelperClientOptions } from './helperClient.js';
 import { createReviewPanel } from './panel/createReviewPanel.js';
 import type { HelperConnection, ReceiptsView, ReviewPanelApi } from './contracts.js';
@@ -20,6 +20,10 @@ export interface ReadReceiptApi {
   readonly helperConnected: boolean;
   readonly panelVisible: boolean;
   readonly statusText: string;
+  readonly viewerState: ViewerState | null;
+  readonly helperPhase: HelperPhase;
+  readonly previewFrameCount: number;
+  readonly lastHelperError: { reason: PauseReason; message: string } | null;
   refresh(): Promise<void>;
   flush(): Promise<void>;
 }
@@ -48,7 +52,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<ReadRe
   });
   command('readReceipt.setApiKey', async () => {
     const value = await vscode.window.showInputBox({ password: true, ignoreFocusOut: true,
-      prompt: 'Presage API key (SecretStorage only; live mode is not implemented yet)' });
+      prompt: 'Presage API key (stored in SecretStorage; sent only to the live helper environment)' });
     if (value === undefined) return;
     if (value.trim()) await context.secrets.store('smartspectra.apiKey', value.trim());
     else await context.secrets.delete('smartspectra.apiKey');
@@ -91,6 +95,8 @@ class ReviewRuntime implements ReadReceiptApi, ReceiptsView, vscode.Disposable {
   private signature = '';
   private closed = false;
   private pendingFlush = false;
+  private previewCount = 0;
+  private helperError: { reason: PauseReason; message: string } | null = null;
   private subscriptions: vscode.Disposable[] = [];
   private helperSubscriptions: vscode.Disposable[] = [];
   private readonly change = new vscode.EventEmitter<void>();
@@ -146,6 +152,13 @@ class ReviewRuntime implements ReadReceiptApi, ReceiptsView, vscode.Disposable {
   get helperConnected() { return this.helper?.connected ?? false; }
   get panelVisible() { return this.panel?.visible ?? false; }
   get statusText() { return this.status.text; }
+  get viewerState(): ViewerState | null {
+    const state = this.helper?.state;
+    return state ? { ...state, pauseReasons: state.pauseReasons.slice() } : null;
+  }
+  get helperPhase(): HelperPhase { return this.helper?.phase ?? 'idle'; }
+  get previewFrameCount(): number { return this.previewCount; }
+  get lastHelperError() { return this.helperError ? { ...this.helperError } : null; }
 
   refresh(): Promise<void> {
     const next = this.refreshQueue.catch(() => {}).then(async () => {
@@ -207,18 +220,35 @@ class ReviewRuntime implements ReadReceiptApi, ReceiptsView, vscode.Disposable {
     if (this.helper?.connected) return;
     if (this.connecting) return this.connecting;
     this.connecting = (async () => {
-      this.panel?.dispose();
+      this.panel?.dispose(); this.panel = undefined;
       for (const disposable of this.helperSubscriptions) disposable.dispose();
       this.helperSubscriptions = [];
-      await this.helper?.shutdown();
+      await this.helper?.shutdown(); this.helper = undefined;
+      this.previewCount = 0; this.helperError = null;
       const config = this.settings();
       const mode = config.get<'live' | 'replay'>('helper.mode', 'replay');
-      if (mode !== 'replay') throw new Error('Live camera mode is not implemented. Choose replay mode to review.');
+      if (mode !== 'replay' && mode !== 'live') throw new Error('Choose live or replay helper mode.');
       const replaySetting = config.get<string>('helper.replayFile', '');
       const replayFile = replaySetting ? (isAbsolute(replaySetting) ? replaySetting : resolve(this.repoRoot, replaySetting)) :
         this.context.asAbsolutePath('runtime/replay/review-session.json');
       const opts: HelperClientOptions = { nodePath: config.get<string>('nodePath', 'node'),
         helperPath: this.context.asAbsolutePath('runtime/helper/main.js'), mode, replayFile, loop: false };
+      if (mode === 'live') {
+        const attached = config.get<boolean>('helper.attach', false);
+        if (attached) throw new Error('Live attachment is unsupported. Disable Read Receipt helper attachment to use an owned camera helper.');
+        if (!attached) {
+          const apiKey = await this.context.secrets.get('smartspectra.apiKey');
+          if (!apiKey?.trim()) throw new Error('Run Read Receipt: Set Presage API Key before starting live camera mode.');
+          opts.apiKey = apiKey;
+        }
+        const approved = await vscode.window.showWarningMessage(
+          'Start a live camera session for up to 90 seconds?',
+          { modal: true, detail: 'Camera frames are processed locally and are not saved by Read Receipt. Presage automatically sends derived pulse, HRV and breathing values to its Insights/LLM service. Authentication, usage and model requests also use the network. Aggregate telemetry is disabled. SDK usage can consume your Presage credits; no credits are purchased by Read Receipt. Stop or close the panel to release the camera. Opening a live session again requires consent.' },
+          'Start Live Camera');
+        if (approved !== 'Start Live Camera' || this.closed) return;
+        opts.liveConsent = true;
+        opts.camera = config.get<number>('helper.cameraIndex', 0);
+      }
       if (config.get<boolean>('helper.attach', false)) {
         const token = await this.context.secrets.get('readReceipt.attachToken');
         if (!token) throw new Error('Set the existing helper token with Read Receipt: Set Helper Token first.');
@@ -226,17 +256,28 @@ class ReviewRuntime implements ReadReceiptApi, ReceiptsView, vscode.Disposable {
       }
       const helper = new HelperClient(opts); this.helper = helper;
       this.helperSubscriptions.push(helper.onError((event) => {
+        this.helperError = { reason: event.reason, message: event.message };
         this.tracker.resetClock(); this.status.tooltip = `Read Receipt: ${event.reason}; open the panel to retry.`;
       }), helper.onState((state) => { if (!state.eyesOn) this.tracker.resetClock(); }),
-      helper.onPhase((phase) => { if (phase.phase !== 'running') this.tracker.resetClock(); }));
+      helper.onPhase((phase) => { if (phase.phase !== 'running') this.tracker.resetClock(); }),
+      helper.onPreviewFrame(() => { this.previewCount += 1; }));
       await helper.connect();
       if (this.closed) { await helper.shutdown(); return; }
+      let liveSessionStarted = false;
       const bridge: HelperConnection = {
         get state() { return helper.state; }, get phase() { return helper.phase; },
         onState: helper.onState, onPhase: helper.onPhase, onPreviewFrame: helper.onPreviewFrame,
         onPulseTrace: helper.onPulseTrace, onError: helper.onError,
         send: (message) => {
           if (this.closed) return;
+          if (mode === 'live' && message.type === 'start') {
+            if (liveSessionStarted) {
+              // A fresh session gets a fresh disclosure, credential read and helper.
+              void this.reconnect().then(() => this.show()).catch(this.report);
+              return;
+            }
+            liveSessionStarted = true;
+          }
           if (message.type === 'start' && !helper.connected) void this.reconnect().then(() => this.show()).catch(this.report);
           else helper.send(message);
         },
@@ -260,6 +301,7 @@ class ReviewRuntime implements ReadReceiptApi, ReceiptsView, vscode.Disposable {
       const visible = this.panelVisible;
       this.panel?.dispose(); this.panel = undefined;
       await this.helper?.shutdown(); this.helper = undefined;
+      this.previewCount = 0; this.helperError = null;
       this.tracker.resetClock(); if (visible) await this.show(); this.render();
     })();
     try { await this.reconnecting; } finally { this.reconnecting = undefined; }

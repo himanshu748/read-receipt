@@ -27,6 +27,10 @@ export interface HelperClientOptions {
   speed?: number;
   /** Passed to the child environment only. Never included in argv or errors. */
   apiKey?: string;
+  /** Explicit disclosure accepted for this live helper connection. */
+  liveConsent?: boolean;
+  /** Native camera index; omitted uses the SDK default. */
+  camera?: number;
   attach?: { host?: string; port: number; token: string };
   startupTimeoutMs?: number;
   /** Monotonic clock, injectable for freshness tests. */
@@ -71,6 +75,9 @@ export class HelperClient implements HelperConnection {
   private rejectConnection: ((error: Error) => void) | undefined;
   private startupTimer: ReturnType<typeof setTimeout> | undefined;
   private staleTimer: ReturnType<typeof setTimeout> | undefined;
+  private liveDeadlineTimer: ReturnType<typeof setTimeout> | undefined;
+  private liveStopTimer: ReturnType<typeof setTimeout> | undefined;
+  private liveStarted = false;
   private shutdownPromise: Promise<void> | undefined;
 
   constructor(private readonly options: HelperClientOptions) {
@@ -81,6 +88,15 @@ export class HelperClient implements HelperConnection {
     }
     if (options.mode !== 'live' && options.mode !== 'replay') {
       throw new Error('Unsupported helper mode.');
+    }
+    if (options.mode === 'live' && options.attach) {
+      throw new Error('Live attachment is unsupported: use an owned helper so camera lifetime and telemetry settings can be enforced.');
+    }
+    if (options.mode === 'live' && options.liveConsent !== true) {
+      throw new Error('Live camera use requires explicit consent to camera capture and provider transmission.');
+    }
+    if (options.camera !== undefined && (!Number.isInteger(options.camera) || options.camera < 0)) {
+      throw new Error('Camera index must be a non-negative integer.');
     }
     if (options.speed !== undefined && (!Number.isFinite(options.speed) || options.speed <= 0)) {
       throw new Error('Replay speed must be positive.');
@@ -100,6 +116,9 @@ export class HelperClient implements HelperConnection {
       if (!options.helperPath) throw new Error('A built helper executable path is required.');
       if (options.mode === 'replay' && !options.replayFile) {
         throw new Error('A replay recording file is required.');
+      }
+      if (options.mode === 'live' && !options.apiKey?.trim()) {
+        throw new Error('Set the Presage API key before starting live camera mode.');
       }
       if (options.nodePath !== undefined && !options.nodePath.trim()) {
         throw new Error('A system Node.js executable is required.');
@@ -145,6 +164,11 @@ export class HelperClient implements HelperConnection {
       (!Number.isFinite(message.maxFps) || message.maxFps < 0 || message.maxFps > 30))) {
       throw new Error('Invalid helper control message.');
     }
+    if (this.options.mode === 'live' && this.connected && message.type === 'start' && this.liveStarted) {
+      this.fail('sdk-error', 'A live helper can start only once. Reconnect for a new consented session.');
+      return;
+    }
+    if (this.options.mode === 'live' && message.type === 'recalibrate' && !this.sessionRequested) return;
     if (message.type === 'start' || message.type === 'recalibrate') this.sessionRequested = true;
     if (message.type === 'stop') this.sessionRequested = false;
     if (message.type === 'stop' || message.type === 'recalibrate') this.invalidateState();
@@ -158,6 +182,19 @@ export class HelperClient implements HelperConnection {
         }
       }
       return;
+    }
+    if (this.options.mode === 'live' && message.type === 'start') {
+      this.liveStarted = true;
+      // Independent of the native process: a blocked SDK cannot extend capture.
+      this.liveDeadlineTimer = setTimeout(() => this.finishLive(
+        'The 90-second live camera limit was reached. Reconnect for a new consented session.'), 90_000);
+      this.liveDeadlineTimer.unref();
+    }
+    if (this.options.mode === 'live' && message.type === 'stop' && this.liveStarted && !this.liveStopTimer) {
+      // Never let native draining hold the camera after an explicit Stop.
+      this.liveStopTimer = setTimeout(() => this.finishLive(
+        'Live camera stopped; the helper was terminated because Stop did not finish within three seconds.'), 3000);
+      this.liveStopTimer.unref();
     }
     this.socket!.send(JSON.stringify(message), (error) => {
       if (error) this.fail('network', 'Could not send a helper control message.');
@@ -176,6 +213,7 @@ export class HelperClient implements HelperConnection {
     this.ready = false;
     this.invalidateState();
     this.clearStartupTimer();
+    this.clearLiveTimers();
     this.rejectConnection?.(new Error('Helper client was closed during startup.'));
     this.rejectConnection = undefined;
     this.resolveConnection = undefined;
@@ -211,9 +249,15 @@ export class HelperClient implements HelperConnection {
     this.token = randomBytes(32).toString('hex');
     const args = [resolve(this.options.helperPath!), '--mode', this.options.mode, '--port', '0', '--token', this.token,
       '--parent-pid', String(process.pid)];
-    if (this.options.replayFile) args.push('--replay', resolve(this.options.replayFile));
-    if (this.options.loop) args.push('--loop');
-    if (this.options.speed !== undefined) args.push('--speed', String(this.options.speed));
+    if (this.options.mode === 'replay') {
+      if (this.options.replayFile) args.push('--replay', resolve(this.options.replayFile));
+      if (this.options.loop) args.push('--loop');
+      if (this.options.speed !== undefined) args.push('--speed', String(this.options.speed));
+    }
+    if (this.options.mode === 'live' && this.options.liveConsent) {
+      args.push('--live-consent', '--max-live-seconds', '90');
+      if (this.options.camera !== undefined) args.push('--camera', String(this.options.camera));
+    }
     const env = { ...process.env };
     // Never propagate Electron's node switch to the independent system runtime.
     delete env.ELECTRON_RUN_AS_NODE;
@@ -245,7 +289,19 @@ export class HelperClient implements HelperConnection {
     child.stderr.on('data', (chunk: Buffer) => { stderr = (stderr + chunk.toString('utf8')).slice(-MAX_STDERR); });
     child.on('error', () => this.fail('sdk-error', 'Could not launch the helper with the configured system Node.js.'));
     child.on('exit', (code, signal) => {
+      this.clearLiveTimers();
       if (this.disposed || this.failure) return;
+      if (this.options.mode === 'live' &&
+        ((!this.sessionRequested && this.liveStarted) || this.currentPhase === 'error')) {
+        // The source exits after Stop or a previously reported SDK error. Preserve
+        // that reason instead of replacing it with an unrelated transport error.
+        this.failure = new Error('The live helper session has ended. Reconnect to start again.');
+        this.ready = false;
+        this.invalidateState();
+        if (this.currentPhase !== 'error') this.setPhase('stopped');
+        this.socket?.terminate();
+        return;
+      }
       const detail = stderr.trim() ? ` ${this.redact(stderr.trim())}` : '';
       this.fail('sdk-error', `Helper exited unexpectedly (${signal ?? code ?? 'unknown'}).${detail}`);
     });
@@ -267,6 +323,12 @@ export class HelperClient implements HelperConnection {
     });
     socket.on('error', () => this.fail('network', 'The local helper connection failed.'));
     socket.on('close', () => {
+      if (this.options.mode === 'live' && this.liveStarted && !this.sessionRequested && !this.disposed && !this.failure) {
+        this.ready = false;
+        this.invalidateState();
+        this.setPhase('stopped');
+        return;
+      }
       if (!this.disposed && !this.failure) this.fail('network', 'The helper disconnected; receipts are paused.');
     });
   }
@@ -329,6 +391,10 @@ export class HelperClient implements HelperConnection {
         if (this.sessionRequested) this.pulseSignal.fire({ t: message.t, values: message.values });
         break;
       case 'error':
+        if (this.options.mode === 'live') {
+          this.fail(message.reason, message.message, message.retryable);
+          break;
+        }
         this.invalidateState();
         this.setPhase('error');
         this.errorSignal.fire({ reason: message.reason, message: this.redact(message.message), retryable: message.retryable });
@@ -353,6 +419,27 @@ export class HelperClient implements HelperConnection {
     this.startupTimer = undefined;
   }
 
+  private clearLiveTimers(): void {
+    if (this.liveDeadlineTimer) clearTimeout(this.liveDeadlineTimer);
+    if (this.liveStopTimer) clearTimeout(this.liveStopTimer);
+    this.liveDeadlineTimer = undefined;
+    this.liveStopTimer = undefined;
+  }
+
+  private finishLive(message: string): void {
+    if (this.disposed || this.failure) return;
+    this.sessionRequested = false;
+    this.invalidateState();
+    if (this.socket?.readyState === WebSocket.OPEN) this.socket.send(JSON.stringify({ type: 'stop' }));
+    this.failure = new Error(message);
+    this.ready = false;
+    this.clearLiveTimers();
+    this.setPhase('stopped', { type: 'phase', phase: 'stopped', message });
+    // The parent owns this child and can stop it even if native teardown hangs.
+    if (this.child?.exitCode === null && this.child.signalCode === null) this.child.kill('SIGKILL');
+    this.socket?.terminate();
+  }
+
   private redact(text: string): string {
     let safe = text;
     for (const secret of [this.token, this.options.apiKey, process.env.SMARTSPECTRA_API_KEY]) {
@@ -361,19 +448,20 @@ export class HelperClient implements HelperConnection {
     return safe;
   }
 
-  private fail(reason: PauseReason, message: string): void {
+  private fail(reason: PauseReason, message: string, retryable = true): void {
     if (this.disposed || this.failure) return;
     const safe = this.redact(message);
     this.failure = new Error(safe);
     this.ready = false;
     this.invalidateState();
     this.clearStartupTimer();
+    this.clearLiveTimers();
     this.pending = [];
     this.setPhase('error');
     this.rejectConnection?.(this.failure);
     this.rejectConnection = undefined;
     this.resolveConnection = undefined;
-    this.errorSignal.fire({ reason, message: safe, retryable: true });
+    this.errorSignal.fire({ reason, message: safe, retryable });
     this.socket?.terminate();
     const child = this.child;
     if (child && child.exitCode === null && child.signalCode === null) {

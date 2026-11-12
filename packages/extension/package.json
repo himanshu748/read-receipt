@@ -74,6 +74,13 @@
           "default": "",
           "description": "Path to a recording JSON used in replay mode."
         },
+        "readReceipt.helper.cameraIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0,
+          "scope": "machine",
+          "description": "Native camera index for live mode. Camera capture requires explicit consent and a Presage key."
+        },
         "readReceipt.helper.attach": {
           "type": "boolean",
           "default": false,

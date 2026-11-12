@@ -2,8 +2,9 @@
 
 Repository: <https://github.com/himanshu748/read-receipt>.
 
-The repository contains replay extension wiring and Git hooks alongside the
-core, helper and panel. The steps below run and verify the replay workflow.
+The repository contains replay/live extension wiring and Git hooks alongside the
+core, helper and panel. Replay is the default and remains the verified walkthrough;
+live hardware outcomes are recorded separately after an explicitly consented run.
 
 ## Run it
 
@@ -25,7 +26,8 @@ npm run demo:repo -- /absolute/path/to/a/new-demo-directory
 ```
 
 The bundled input is five minutes of synthetic replay with roughly 20 seconds of
-calibration. No camera, Presage SDK installation, API key or credits are used.
+calibration. Replay does not initialize the SDK, capture camera frames, use an
+API key or consume provider credits.
 All receipts from this input must say `replay viewer`.
 
 ## Implemented
@@ -34,12 +36,43 @@ All receipts from this input must say `replay viewer`.
 | --- | --- |
 | Core/protocol | Diff parsing, content identities, thresholds, per-line coverage, persistence and runtime message guards. |
 | Replay helper | Recording playback, state machine, pause reasons and authenticated loopback WebSocket. |
+| Live helper | Pinned SmartSpectra 3.5.0 adapter, locally reduced face/eye features, pulse/waveform input and in-memory JPEG preview. |
 | Extension | Activation, helper spawn/attach, fresh-state checks, editor visibility/dirty/window gating, gutter/status UI, commands and removed-text review documents. |
 | Panel | Replay indicator, calibration, pulse waveform, unread navigation, Start/Stop and recalibration. |
 | Hooks | Staged-diff blocking, one-shot overrides, bypass detection and trailers; foreign hooks are preserved. |
 | Demo/integration | Six-hunk generator, helper/real-Git replay test, F5 configuration and editor-host test runner. |
 
+## Live setup
+
+Use **Read Receipt: Set Presage API Key**, then choose `live` for
+`readReceipt.helper.mode` and the machine-level `helper.cameraIndex` (default `0`).
+Open the panel and accept the per-session disclosure. The key is read from
+SecretStorage and passed only through the child environment. Declining consent
+creates no live helper. A new session requires consent again.
+
+The extension limits each live session to 90 seconds. The standalone CLI requires
+`--live-consent` and defaults to the same 90-second bound; its explicit
+`--max-live-seconds` cannot exceed 300. Stop/close releases capture; hiding the
+panel immediately prevents counting/preview and schedules capture stop in about
+two seconds. No video is saved. Derived vitals may still leave the device through
+Presage's automatic Insights feature with telemetry disabled. See
+[consent](docs/consent.md) and [camera setup](docs/camera-permissions.md).
+
+The extension independently kills its owned helper at the live deadline, even if
+the native event loop or teardown hangs. Explicit Stop has a three-second parent
+kill bound. Live attachment is rejected because the extension cannot enforce an
+external helper's lifetime, configuration or telemetry policy.
+
+Source builds keep the native SDK external, resolving from the checkout's
+`node_modules`. Copying only `runtime/helper/main.js` will not provide the SDK.
+This is not a validated VSIX distribution.
+
 ## Validation
+
+The live implementation and first native attempt are documented in
+[the live validation record](docs/live-validation.md). The initial Idle lifecycle
+bug is fixed and regression-tested; physical success has not been established.
+The user deferred the editor-host run after its download exhausted disk space.
 
 ```sh
 npm run ci
@@ -54,7 +87,7 @@ repository. It verified unread commits block, five read hunks leave the offscree
 edited content becomes unread, and inactive/hidden editor states earn no receipts.
 
 This terminal integration supplies simulated editor visibility and is not
-human-review evidence. `npm run ci` passed with **153 tests**, strict typechecking,
+human-review evidence. Before the live adapter, `npm run ci` passed with **153 tests**, strict typechecking,
 lint and the wording check. The full build passed.
 
 The separate **Cursor 3.29.15 editor-host test passed** in an isolated profile:
@@ -72,15 +105,15 @@ platform/editor combinations and an installable VSIX remain unverified.
 
 ## Remaining work
 
-1. **Live feasibility/adapter:** live mode is deliberately rejected. The spike
-   script exists, but no live SDK/hardware result is established here. Run a
-   separately authorized feasibility check before claiming live integration; do
-   not install the SDK, open a camera or consume credits during replay validation.
+1. **Live hardware validation:** the adapter is implemented, but a successful
+   live camera → pulse/face signals → receipts → Git commit must be observed
+   separately. Replay or mock-SDK tests cannot establish that result. Do not
+   open a camera or consume provider credits during replay validation.
 2. **Release checks:** validate an installable VSIX, choose a license and test the
    required editor/platform combinations. This is not a Marketplace release.
 3. **Demo/submission:** record the real journey and label synthetic segments.
    A planned live narrative is not evidence of a delivered live feature.
 
-Attach mode requires its port and **Read Receipt: Set Helper Token** in
+Replay attach mode requires its port and **Read Receipt: Set Helper Token** in
 SecretStorage. Keep credentials out of settings/source/logs and API keys out of
 argv. See [troubleshooting](docs/troubleshooting.md) for recovery steps.

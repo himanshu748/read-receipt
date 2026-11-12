@@ -32,7 +32,7 @@ export interface ViewerState {
   /** Milliseconds since helper session start (monotonic). */
   t: number;
   source: SourceKind;
-  /** Pulse present within the liveness window (blocks a still photo). */
+  /** Pulse present within the liveness window; no anti-spoofing guarantee. */
   live: boolean;
   /** False only for a closure longer than closureMs; blinks are ignored. */
   eyesOpen: boolean;

@@ -102,3 +102,29 @@ npm run test:editor
 The first uses the real helper and Git hooks with **simulated editor visibility**
 in a temporary repo. The second launches a separate editor-host test and disposable
 profile. Both use synthetic input; neither proves live SDK behavior or human review.
+
+## Separate live demonstration
+
+Use a fresh disposable demo repository and identify this segment as **live
+camera**, separately from every replay clip or receipt. Build the source checkout
+with its pinned SmartSpectra 3.5.0 native dependency present. Store the key with
+**Read Receipt: Set Presage API Key**, select `live` and the intended machine-level
+`helper.cameraIndex`, then open the panel and accept its disclosure.
+
+Before capture, explain that raw frames stay local and no video is saved, but
+Presage can automatically send derived vitals to its Insights/LLM service.
+Telemetry is disabled; SDK usage can consume existing credits. Do not start a
+session without permission to capture the participant and use the allowance.
+
+The editor limits the session to 90 seconds. Show an actual blocked unread
+commit, calibration, camera preview and usable pulse/face states. Keep each
+changed block visible until its receipt completes, then retry the actual Git
+commit and show the resulting live-source trailer. Stop or close the panel and
+observe camera release. Hiding the panel disables preview/counting immediately
+and schedules capture stop after about two seconds.
+
+If the provider fails, pulse never becomes usable or the time bound expires
+before all receipts complete, show that result honestly. Do not relabel replay
+receipts, weaken the live gate or restart capture silently to make a successful
+demo. Physical eye closure, looking away, multiple faces and camera release need
+observed hardware checks; fixture coverage is a separate result.

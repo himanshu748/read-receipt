@@ -4,18 +4,23 @@ Review changed code before committing it. Read Receipt marks each Git diff hunk
 with progress ticks in VS Code or Cursor, saves per-line viewing time, and blocks
 commits whose staged text changes have no completed receipt.
 
-**The current implementation uses synthetic replay signals.** Replay exercises
-the editor, helper, receipt store and Git hooks without a camera, Presage API key
-or SDK credits. Its trailers say `replay viewer`; they do not establish that a
-person looked at, understood or approved the code.
+Choose **synthetic replay** for a camera-free walkthrough, or **live camera**
+for Presage SmartSpectra-derived viewer signals. Replay exercises the editor,
+helper, receipt store and Git hooks without a Presage API key or SDK credits.
+Its trailers say `replay viewer`; they do not establish that a person looked at,
+understood or approved the code.
 
 ```text
 Read-Receipt: 6/6 hunks, 23s eyes-on, replay viewer
 ```
 
 The timing above is illustrative; actual timing depends on visibility and
-thresholds. Live Presage integration is planned and explicitly rejected by the
-current helper and extension.
+thresholds. Live mode requires a key, supported camera/runtime, provider access
+and explicit consent. Its hardware outcome is recorded separately from replay
+validation; installing the SDK or passing fixture tests does not prove live use.
+**Live end-to-end verification is pending:** the first native attempt exposed a
+startup issue now covered by a regression test; the editor-host run was deferred
+after disk space ran out. See the [live validation record](docs/live-validation.md).
 
 ## Run the replay prototype
 
@@ -54,6 +59,37 @@ untrusted and virtual workspaces are not supported.
 The [demo walkthrough](docs/demo-script.md) includes deliberately leaving the
 fake-key block unread, a blocked commit, and a passing replay-labelled commit.
 
+## Run with a live camera
+
+The source checkout pins `@smartspectra/node-sdk` **3.5.0**. Its native runtime
+must support your OS/architecture; see [camera setup](docs/camera-permissions.md).
+The editor continues to use system Node, independently of Electron.
+
+1. Run **Read Receipt: Set Presage API Key**. The key goes into editor
+   SecretStorage, then only into the live helper's environment.
+2. Set `readReceipt.helper.mode` to `live`. Set
+   `readReceipt.helper.cameraIndex` if the default camera index `0` is unsuitable.
+3. Run **Read Receipt: Open Review Panel** and accept the session disclosure.
+   Declining does not create a live helper. Grant OS camera access if prompted.
+4. Keep the panel visible and look at the editor during calibration. Live viewing
+   time counts only after usable face/eye signals and pulse/waveform data arrive.
+   The camera preview remains in memory and travels over authenticated loopback.
+5. Stop or close the panel to release the camera. Hiding it stops counting and
+   preview immediately, then stops capture after approximately two seconds.
+
+Each editor live session is limited to **90 seconds**. Starting another session
+requires the disclosure again; there is no automatic retry on provider failure.
+An independent editor-side watchdog terminates the owned helper at the deadline,
+including when native teardown hangs. Explicit Stop has a three-second kill bound.
+Live use can consume Presage credits. Read Receipt does not buy credits or enable
+billing. Confirm your account allowance before use.
+
+**Live mode is not network-free.** Presage authentication, model and usage
+requests use the network. Its automatic Insights feature can send derived vitals
+to Presage and an LLM service, even though aggregate telemetry is disabled.
+No raw video is saved by Read Receipt. Read [the full data disclosure](docs/consent.md)
+before enabling the camera.
+
 ## What is implemented
 
 - Worktree/staged diff parsing, content-based hunk identities, configurable
@@ -66,24 +102,22 @@ fake-key block unread, a blocked commit, and a passing replay-labelled commit.
   input supports review; `fixtures/replay/demo-session.json` exercises interruptions.
 - Pre-commit/message hooks, honest replay/override/bypass trailers, safe hook
   installation and a disposable six-hunk demo repository.
-
-The native SmartSpectra SDK, live adapter and real camera preview are **not
-implemented or validated**. `scripts/spike/probe.mjs` is a separate future
-feasibility experiment; normal install/replay does not install or call that SDK.
+- Live SDK adapter, local landmark reduction, camera preview, explicit session
+  consent and bounded camera lifecycle. Hardware validation is a separate gate.
 
 ## Commands and settings
 
 The Command Palette provides **Open Review Panel**, **Next Unread Hunk**,
 **Recalibrate**, **Install Git Hooks**, **Reset Receipts**, **Reconnect Helper**,
-**Set Helper Token** and **Set Presage API Key**. The API-key command only stores
-a key for future live work; it does not enable live mode.
+**Set Helper Token** and **Set Presage API Key**. Saving a key does not start a camera.
 
 | Setting | Default | Purpose |
 | --- | --- | --- |
 | `readReceipt.nodePath` | `node` | System Node.js executable. Use an absolute path if the editor cannot find Node. |
-| `readReceipt.helper.mode` | `replay` | Keep replay selected; live currently returns an error. |
+| `readReceipt.helper.mode` | `replay` | Synthetic replay or consented live SDK camera input. |
 | `readReceipt.helper.replayFile` | empty | Bundled sustained recording, or a custom path relative to the reviewed Git root/absolute path. |
-| `readReceipt.helper.attach` | `false` | Connect to an already-running local helper. |
+| `readReceipt.helper.cameraIndex` | `0` | Native camera index, stored at machine scope. |
+| `readReceipt.helper.attach` | `false` | Connect to an already-running replay helper; live attachment is rejected. |
 | `readReceipt.helper.attachPort` | `0` | Existing helper's port; required when attachment is enabled. |
 
 Attachment tokens use **Read Receipt: Set Helper Token** and editor SecretStorage,
@@ -155,20 +189,23 @@ Passing Node/DOM tests alone does not establish rendered editor behavior. See
 [MAC_HANDOFF.md](MAC_HANDOFF.md) for current validation and remaining work.
 
 The build bundles the editor and standalone helper as CommonJS, hooks as ESM,
-and includes the recording/webview assets. Marketplace publication and installable
-VSIX validation remain separate release work.
+and includes the recording/webview assets. The native SDK stays external and
+resolves from the source checkout's `node_modules`; the helper bundle alone is
+not an installable distribution. Marketplace publication and VSIX/native-dependency
+packaging validation remain separate release work.
 
 ## Data and limits
 
 Receipts, timings and hook metadata stay under the repository's Git directory at
-`read-receipt/`; helper tokens and future API keys use editor SecretStorage. Replay
+`read-receipt/`; helper tokens and API keys use editor SecretStorage. Replay
 acquires no camera frames and makes no SDK calls. The normal helper binds to
 `127.0.0.1`, authenticates its WebSocket and rejects browser `Origin` headers.
 See [Consent & Data Handling](docs/consent.md).
 
 Receipts are locally editable and bypassable. They do not establish code safety,
-actual human review or resistance to tampering. Live hardware behavior, other
-editor/platform combinations and provider integration remain unverified.
+actual human review or resistance to tampering. Live hardware/provider outcomes
+must be assessed independently of replay results. Other editor/platform
+combinations remain unverified.
 
 ## Further reading
 

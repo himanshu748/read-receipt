@@ -10,6 +10,7 @@ import {
 } from '@rr/protocol';
 import { HelperSession } from './session.js';
 import type { ReplaySource } from './sources/replay.js';
+import type { LiveSource } from './sources/live.js';
 import type { Recorder } from './recorder.js';
 import type { EyesOnConfig } from './eyesOn.js';
 
@@ -22,6 +23,7 @@ export interface HelperServerOptions {
   source: SourceKind;
   sdkVersion?: string | null;
   replay?: ReplaySource;
+  live?: LiveSource;
   recorder?: Recorder;
   cfg?: EyesOnConfig;
   /** State emit rate in Hz (default 10). */
@@ -58,6 +60,10 @@ export async function startHelperServer(
   opts: HelperServerOptions,
 ): Promise<HelperServer> {
   const host = opts.host ?? '127.0.0.1';
+  if (host !== '127.0.0.1' && host !== '::1') throw new Error('Helper must bind a loopback IP address.');
+  if (opts.source === 'live' && (!opts.live || opts.replay || opts.recorder)) {
+    throw new Error('Live mode requires a live source and does not support recording.');
+  }
   const stateHz = opts.stateHz ?? 10;
   const newSession = () => new HelperSession({
     source: opts.source,
@@ -77,6 +83,8 @@ export async function startHelperServer(
   let pressureBatch: number[] = [];
   let pressureBatchT = 0;
   let unsubReplay: (() => void) | null = null;
+  let unsubLive: (() => void) | null = null;
+  let liveStarted = false;
 
   const broadcast = (msg: HelperToClient): void => {
     for (const ws of clients) send(ws, msg);
@@ -177,6 +185,22 @@ export async function startHelperServer(
   const handleClientMessage = (msg: ClientToHelper): void => {
     switch (msg.type) {
       case 'start': {
+        if (opts.live) {
+          if (liveStarted) return;
+          liveStarted = true;
+          beginSession();
+          unsubLive = opts.live.onEvent((ev) => {
+            if (ev.type === 'sample') onSample(ev.sample);
+            if (ev.type === 'preview') {
+              for (const ws of clients) if (ws.readyState === WebSocket.OPEN && ws.bufferedAmount < 256 * 1024) ws.send(ev.jpeg);
+            }
+            if (ev.type === 'ended') stopSession();
+          });
+          void opts.live.start().catch(() => {
+            onSample({ kind: 'error', t: 0, code: 8, message: 'Reconnect before starting another live session.', retryable: false });
+          });
+          break;
+        }
         unsubReplay?.();
         unsubReplay = null;
         opts.replay?.reset();
@@ -194,6 +218,7 @@ export async function startHelperServer(
       case 'stop': {
         opts.replay?.stop();
         stopSession();
+        void opts.live?.stop().catch(() => { /* already invalidated; owner reaps native process */ });
         break;
       }
       case 'recalibrate': {
@@ -202,7 +227,7 @@ export async function startHelperServer(
         break;
       }
       case 'preview': {
-        // Replay has no camera frames; acknowledge silently.
+        opts.live?.setPreview(msg.enabled, msg.maxFps);
         break;
       }
       default: {
@@ -257,6 +282,10 @@ export async function startHelperServer(
 
     ws.on('close', () => {
       clients.delete(ws);
+      if (opts.live && clients.size === 0) {
+        stopSession();
+        void opts.live.stop().catch(() => { /* owner reaps native process */ });
+      }
     });
   });
 
@@ -276,7 +305,9 @@ export async function startHelperServer(
     async close() {
       opts.replay?.stop();
       unsubReplay?.();
+      unsubLive?.();
       stopStateLoop();
+      await opts.live?.stop();
       await opts.recorder?.flush();
       for (const ws of clients) ws.close();
       clients.clear();

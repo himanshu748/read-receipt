@@ -1,8 +1,9 @@
-# Troubleshooting replay
+# Troubleshooting
 
-The current input is synthetic. Camera labels and pulse values describe the
-recording; changing lighting, buying credits or granting camera permission will
-not alter those samples. Live mode is not implemented.
+The default input is synthetic replay. In that mode, camera labels and pulse
+values describe the recording; changing lighting, buying credits or granting
+camera permission will not alter those samples. Live mode uses a separate native
+SDK adapter and needs its own credentials, permission and provider access.
 
 ## Extension startup
 
@@ -15,6 +16,40 @@ not alter those samples. Live mode is not implemented.
 - Set `readReceipt.nodePath` to system Node.js 20 or newer, using an absolute path
   if the editor cannot find `node`. The helper does not use Electron-as-node.
 - Read the **Read Receipt** output channel and command error for details.
+
+## Live camera startup or provider failure
+
+- Set the key with **Read Receipt: Set Presage API Key**. A key saved in a terminal
+  environment is not automatically imported into the editor's SecretStorage.
+- Choose `live` for `readReceipt.helper.mode`, then open the Review Panel and
+  accept the disclosure. Cancelling creates no live helper. Each new session
+  requires consent and is capped at 90 seconds by the extension.
+- Disable `readReceipt.helper.attach` for live use. Only replay attachment is
+  supported; live capture must use an owned helper with an enforceable deadline.
+- If the SDK/native package cannot load, run `npm ci` in the source checkout and
+  use a supported OS/architecture. Do not copy only the bundled helper; native
+  dependencies remain external in `node_modules`. Intel macOS is unsupported.
+- A permission-denied, busy or unavailable camera requires local inspection;
+  see [camera setup](camera-permissions.md). Select the intended machine-level
+  `readReceipt.helper.cameraIndex`; close other camera applications if necessary.
+- `auth-failed` means the provider rejected authentication; verify account/key
+  access privately. `credits-exhausted` stops the session; use replay or resolve
+  the account allowance yourself. Read Receipt does not buy credits.
+- `network` or `sdk-error` pauses receipts and does not silently retry capture.
+  Inspect the redacted message. Reconnect only for a deliberate new session;
+  granting more camera permissions cannot repair provider transport.
+- No pulse during warm-up is not a live receipt. Calibration and usable
+  face/eye, pulse and waveform signals must all be present. If the SDK fails or
+  signals never become usable, report the observed failure rather than labelling
+  a fixture test as live success.
+- Stop/close releases capture. Hiding disables preview/counting immediately and
+  schedules capture stop after about two seconds; an ended 90-second session
+  requires a new consented start. Never leave a capture retry loop running.
+  The independent parent watchdog terminates a hung live helper at 90 seconds;
+  explicit Stop has a three-second kill fallback.
+
+Aggregate telemetry is disabled, but automatic derived-vitals transmission and
+authenticated provider requests can still occur. See [data handling](consent.md).
 
 ## Receipts do not progress
 
@@ -32,7 +67,7 @@ Deleted text opens in a read-only review document through Next Unread Hunk or
 the unread list. Looking at the surviving line beside a deletion does not review
 the removed text.
 
-## Pause-scenario fixture
+## Replay pause-scenario fixture
 
 Use `fixtures/replay/demo-session.json` to exercise the short interruption fixture.
 Relative `readReceipt.helper.replayFile` paths resolve from the repository being
@@ -53,7 +88,7 @@ does not mean an account was billed or exhausted.
 | `network` | Local helper disconnected or stopped delivering fresh state. Reconnect and check its process/port. |
 | `panel-hidden` | Show the panel again. Hidden panels earn no time. |
 
-## Attach to a terminal helper
+## Attach to a terminal replay helper
 
 From the built source checkout:
 
@@ -70,7 +105,8 @@ port. Run **Read Receipt: Set Helper Token**, enter the terminal token, then ope
 the Review Panel. Display the token privately if needed; do not share it in logs
 or workspace settings. Tokens need at least 32 hexadecimal characters.
 
-Attachment is loopback-only. Closing the extension stops its session but leaves
+Replay attachment is loopback-only. Live attachment is rejected. Closing the
+extension stops its replay session but leaves
 the terminal server alive; stop that process yourself afterward. To return to
 normal spawning, disable attachment and use Reconnect Helper.
 
